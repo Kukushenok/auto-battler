@@ -1,6 +1,6 @@
 ﻿namespace AutoBattler
 {
-    public enum AttackSource
+    public enum AttackType
     {
         Ability,  // TODO: utf8
         Chopping, // рубящий

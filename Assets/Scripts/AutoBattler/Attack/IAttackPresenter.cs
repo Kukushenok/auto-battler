@@ -4,6 +4,7 @@ namespace AutoBattler
 {
     public interface IAttackPresenter
     {
-        public Task VisualiseBasicAttack(AttackSource src, float damage)=> Task.CompletedTask;
+        public Task VisualiseBasicAttack(AttackType src, float damage)=> Task.CompletedTask;
+        public Task VisualiseOtherAttack(string animID, AttackType src, float damage) => Task.CompletedTask;
     }
 }

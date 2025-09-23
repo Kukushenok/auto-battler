@@ -2,7 +2,7 @@
 {
     public interface IAttackBuilder
     {
-        public IAttackBuilder Append(AttackSource src, float damage);
+        public IAttackBuilder Append(AttackType src, float damage);
         public IAttack Build();
     }
 }
