@@ -7,7 +7,7 @@ namespace Game.View
     {
         [SerializeField] private MonoBehaviourView<Choice> Choicer;
         [SerializeField] private MonoBehaviourView<string> Name;
-        public override UniTask Hide()
+        protected override UniTask DoHide()
         {
             return UniTask.WhenAll(
                 Choicer.TryHide(),
@@ -15,7 +15,7 @@ namespace Game.View
              );
         }
 
-        public override UniTask InitValueAsync(SkillChoice value)
+        protected override UniTask DoInit(SkillChoice value)
         {
             return UniTask.WhenAll(
                     Choicer.TryInit(value),
@@ -23,7 +23,7 @@ namespace Game.View
             );
         }
 
-        public override UniTask UpdateValue(SkillChoice value)
+        protected override UniTask DoUpdate(SkillChoice value)
         {
             return UniTask.WhenAll(
                 Choicer.TryUpdate(value),

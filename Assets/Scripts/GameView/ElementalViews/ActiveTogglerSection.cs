@@ -4,13 +4,13 @@ namespace Game.View
 {
     public class ActiveTogglerSection : MonoBehaviorSection
     {
-        public override UniTask Hide()
+        protected override UniTask DoHide()
         {
             gameObject.SetActive(false);
             return UniTask.CompletedTask;
         }
 
-        public override UniTask Show()
+        protected override UniTask DoShow()
         {
             gameObject.SetActive(true);
             return UniTask.CompletedTask;

@@ -9,7 +9,7 @@ namespace Game.View
         [SerializeField] private MonoBehaviourView<int> strength;
         [SerializeField] private MonoBehaviourView<int> dexterity;
         [SerializeField] private MonoBehaviourView<int> endurance;
-        public override UniTask Hide()
+        protected override UniTask DoHide()
         {
             return UniTask.WhenAll(
                 strength.TryHide(),
@@ -18,7 +18,7 @@ namespace Game.View
                 );
         }
 
-        public override UniTask InitValueAsync(IEntityStats value)
+        protected override UniTask DoInit(IEntityStats value)
         {
             return UniTask.WhenAll(
                 strength.TryInit(value.Strength),
@@ -27,7 +27,7 @@ namespace Game.View
                 );
         }
 
-        public override UniTask UpdateValue(IEntityStats value)
+        protected override UniTask DoUpdate(IEntityStats value)
         {
             return UniTask.WhenAll(
                 strength.TryUpdate(value.Strength),

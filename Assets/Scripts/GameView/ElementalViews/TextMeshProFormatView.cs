@@ -18,12 +18,12 @@ namespace Game.View
             text = GetComponent<TextMeshProUGUI>();
             text.color = transparent;
         }
-        public override async UniTask Hide()
+        protected override async UniTask DoHide()
         {
             await LMotion.Create(baseColor, transparent, 0.5f).WithEase(Ease.InSine).BindToColor(text).ToUniTask();
         }
 
-        public override async UniTask InitValueAsync(T value) 
+        protected override async UniTask DoInit(T value) 
         {
             text.text = string.Format(format, value);
             var x = LMotion.Create(transparent, baseColor, 0.5f).WithEase(Ease.InSine).BindToColor(text).ToUniTask();
@@ -32,7 +32,7 @@ namespace Game.View
             await UniTask.WhenAll(x, y);
         }
 
-        public override async UniTask UpdateValue(T value)
+        protected override async UniTask DoUpdate(T value)
         {
             text.text = string.Format(format, value);
             await LMotion.Punch.Create(1.0f, 0.2f, 0.25f).WithFrequency(20)

@@ -9,7 +9,7 @@ namespace Game.View
         [SerializeField] private MonoBehaviourView<Choice> choicer;
         [SerializeField] private MonoBehaviourView<float> weaponDamage;
 
-        public override UniTask Hide()
+        protected override UniTask DoHide()
         {
             return UniTask.WhenAll(
                 choicer.TryHide(),
@@ -17,7 +17,7 @@ namespace Game.View
                 );
         }
 
-        public override UniTask InitValueAsync(WeaponChoice value)
+        protected override UniTask DoInit(WeaponChoice value)
         {
             return UniTask.WhenAll(
                  choicer.TryInit(value),
@@ -25,7 +25,7 @@ namespace Game.View
              );
         }
 
-        public override UniTask UpdateValue(WeaponChoice value)
+        protected override UniTask DoUpdate(WeaponChoice value)
         {
             return UniTask.WhenAll(
                 choicer.TryUpdate(value),

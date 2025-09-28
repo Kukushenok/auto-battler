@@ -20,18 +20,18 @@ namespace Game.View
             await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
         }
 
-        public override async UniTask Hide()
+        protected override async UniTask DoHide()
         {
             await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
         }
 
-        public override async UniTask InitValueAsync(BattleEntitySkinSO value)
+        protected override async UniTask DoInit(BattleEntitySkinSO value)
         {
             currentPrefabInstance = Instantiate(value.Skin, prefabTransform).GetComponent<SpriteRenderer>();
             await LMotion.Create(inSettings).BindToColor(currentPrefabInstance).ToUniTask();
         }
 
-        public override UniTask UpdateValue(BattleEntitySkinSO value)
+        protected override UniTask DoUpdate(BattleEntitySkinSO value)
         {
             return InitValueAsync(value);
         }

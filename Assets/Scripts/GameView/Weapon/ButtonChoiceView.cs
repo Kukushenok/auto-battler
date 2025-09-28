@@ -18,18 +18,18 @@ namespace Game.View
         {
             if(btn != null) btn.onClick.RemoveListener(OnButtonDown);
         }
-        public override UniTask Hide()
+        protected override UniTask DoHide()
         {
             return UniTask.CompletedTask;
         }
 
-        public override UniTask InitValueAsync(Choice value)
+        protected override UniTask DoInit(Choice value)
         {
             currentChoice = value;
             return UniTask.CompletedTask;
         }
 
-        public override UniTask UpdateValue(Choice value)
+        protected override UniTask DoUpdate(Choice value)
         {
             currentChoice = value;
             return UniTask.CompletedTask;

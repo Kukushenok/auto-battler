@@ -8,26 +8,26 @@ namespace Game.View
         [SerializeField] private MonoBehaviourView<float> health;
         [SerializeField] private MonoBehaviourView<float> maxHealth;
 
-        public override async UniTask Hide()
+        protected override async UniTask DoHide()
         {
             await UniTask.WhenAll(
-                health?.Hide() ?? UniTask.CompletedTask,
-                maxHealth?.Hide() ?? UniTask.CompletedTask
+                health.TryHide(),
+                maxHealth.TryHide()
             );
         }
 
-        public override async UniTask InitValueAsync(HealthStats value)
+        protected override async UniTask DoInit(HealthStats value)
         {
             await UniTask.WhenAll(
-                health?.InitValueAsync(value.HP) ?? UniTask.CompletedTask, 
-                maxHealth?.InitValueAsync(value.MaxHP) ?? UniTask.CompletedTask
+                health.TryInit(value.HP), 
+                maxHealth.TryInit(value.MaxHP)
             );
         }
-        public override async UniTask UpdateValue(HealthStats value)
+        protected override async UniTask DoUpdate(HealthStats value)
         {
             await UniTask.WhenAll(
-                health?.UpdateValue(value.HP) ?? UniTask.CompletedTask, 
-                maxHealth?.UpdateValue(value.MaxHP) ?? UniTask.CompletedTask
+                health.TryUpdate(value.HP), 
+                maxHealth.TryUpdate(value.MaxHP)
             );
         }
     }

@@ -8,17 +8,17 @@ namespace Game.View
     public class DecomposedWeaponView : MonoBehaviourView<WeaponSO>
     {
         [SerializeField] private MonoBehaviourView<float> Power;
-        public override async UniTask Hide()
+        protected override async UniTask DoHide()
         {
             await Power.Hide();
         }
 
-        public override async UniTask InitValueAsync(WeaponSO value)
+        protected override async UniTask DoInit(WeaponSO value)
         {
             await Power.InitValueAsync(value.Damage);
         }
 
-        public override async UniTask UpdateValue(WeaponSO value)
+        protected override async UniTask DoUpdate(WeaponSO value)
         {
             await Power.UpdateValue(value.Damage);
         }

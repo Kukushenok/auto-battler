@@ -7,7 +7,7 @@ namespace Game.View
     {
         [SerializeField] private MonoBehaviourView<int> wanted;
         [SerializeField] private MonoBehaviourView<int> got;
-        public override UniTask Hide()
+        protected override UniTask DoHide()
         {
             return UniTask.WhenAll(
                 wanted.TryHide(),
@@ -15,7 +15,7 @@ namespace Game.View
                 );
         }
 
-        public override UniTask InitValueAsync(DexterityCheck value)
+        protected override UniTask DoInit(DexterityCheck value)
         {
             return UniTask.WhenAll(
                 wanted.TryInit(value.Wanted),
@@ -23,7 +23,7 @@ namespace Game.View
                 );
         }
 
-        public override UniTask UpdateValue(DexterityCheck value)
+        protected override UniTask DoUpdate(DexterityCheck value)
         {
             return UniTask.WhenAll(
                 wanted.TryUpdate(value.Wanted),
