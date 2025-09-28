@@ -38,13 +38,16 @@ namespace Game.Repositories
     class PlayerSkillLines : ISkillRepository
     {
         private SkillLine[] skillLines;
-        public PlayerSkillLines(PlayerClassSkillBranch[] branches)
+        private int limitLevel;
+        public PlayerSkillLines(PlayerClassSkillBranch[] branches, int limitLevel)
         {
             skillLines = new SkillLine[branches.Length];
-            for(int i = 0; i < skillLines.Length; i++)
+            for (int i = 0; i < skillLines.Length; i++)
             {
                 skillLines[i] = new SkillLine(branches[i].Skills, branches[i].StartingWeapon);
             }
+
+            this.limitLevel = limitLevel;
         }
 
         public void Choose(ISkillTree descriptor)
@@ -54,6 +57,7 @@ namespace Game.Repositories
                 if(Q == descriptor)
                 {
                     Q.AddLevel();
+                    limitLevel--;
                     return;
                 }
             }
@@ -62,6 +66,7 @@ namespace Game.Repositories
 
         IEnumerable<ISkillTree> ISkillRepository.GetSkills()
         {
+            if (limitLevel <= 0) yield break;
             foreach (var Q in skillLines)
             {
                 yield return Q;

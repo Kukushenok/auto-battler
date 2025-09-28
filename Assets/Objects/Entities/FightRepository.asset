@@ -15,3 +15,9 @@ MonoBehaviour:
   Fights:
   - BattleEntity: {fileID: 11400000, guid: 96d645b462df73b4493c6f59ccfabaa1, type: 2}
     Reward: {fileID: 11400000, guid: caa8beec0dd59c24ea380b4f5be024fd, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 2aaa156792921d94caf3a5c557a71163, type: 2}
+    Reward: {fileID: 11400000, guid: 873cb722497c02f419f88624399af02f, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 6aea5b8e67dcb1a4cae2df93df392db7, type: 2}
+    Reward: {fileID: 11400000, guid: 5eb535eabd533d44caf1908bb8c0ccca, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 4d5388543b342fd42b76167037dae791, type: 2}
+    Reward: {fileID: 11400000, guid: b4d8e9b9b69291541b0464d279db6ac6, type: 2}

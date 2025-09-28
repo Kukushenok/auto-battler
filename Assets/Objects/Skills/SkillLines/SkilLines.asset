@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e5e2cec10c631429959f98d18ee26e, type: 3}
   m_Name: SkilLines
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.PlayerSkillChooseRepository
-  SkillSets:
+  skillSets:
   - {fileID: 11400000, guid: 9e4e3a838b0814441a1db23606b6da22, type: 2}
   - {fileID: 11400000, guid: 5e893b1a6f2e18c448393b182de96a7e, type: 2}
+  limitLevel: 3

@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: SkinRepository
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.BattleEntitySkinRepository
   <Values>k__BackingField:
+  - {fileID: 11400000, guid: b80ebd4cf5ed2434e9625155fd42044b, type: 2}
+  - {fileID: 11400000, guid: 7595d2365f424454192eaff4a33ca32e, type: 2}
   - {fileID: 11400000, guid: 86471e9232981514b96239d1dba44ef9, type: 2}
   - {fileID: 11400000, guid: d1671160e3bb91e4eb74863b688e4e81, type: 2}
+  - {fileID: 11400000, guid: 036d056fdb19d0140964a4798d714e83, type: 2}

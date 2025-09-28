@@ -27,26 +27,30 @@ namespace AutoBattler
         private async Task<(ISkillDescriptor, IWeapon)> ChooseSkill()
         {
             IWeapon resWeapon = null;
+            ISkillDescriptor chosenSkill = null;
             var skills = m_Settings.SkillRepository.GetSkills();
             List<ISkillDescriptor> descriptors = new List<ISkillDescriptor>();
             foreach(var x in skills)
             {
                 if (!x.IsExausted) descriptors.Add(x.GetCurrentSkill());
             }
-            var chosenSkill = await m_Settings.Controller.ChooseGameSkill(descriptors);
-            foreach (var x in skills)
+            if (descriptors.Count > 0)
             {
-                if (!x.IsExausted)
+                chosenSkill = await m_Settings.Controller.ChooseGameSkill(descriptors);
+                foreach (var x in skills)
                 {
-                    if(x.GetCurrentSkill() == chosenSkill)
+                    if (!x.IsExausted)
                     {
-                        resWeapon = x.GetStartingWeapon();
-                        m_Settings.SkillRepository.Choose(x);
-                        break;
+                        if(x.GetCurrentSkill() == chosenSkill)
+                        {
+                            resWeapon = x.GetStartingWeapon();
+                            m_Settings.SkillRepository.Choose(x);
+                            break;
+                        }
                     }
                 }
             }
-            return new(chosenSkill, resWeapon);
+            return (chosenSkill, resWeapon);
         }
         public async Task Play()
         {
@@ -65,25 +69,31 @@ namespace AutoBattler
                 var playerBuilder = m_Settings.EntityRepository.GetPlayer();
 
                 // CHOOSE A SKILL
-                var skills = m_Settings.SkillRepository.GetSkills();
-
-                (var newSkill, var newWeapon) = await ChooseSkill();
-                if (weaponOverride == null)
+                bool aquiredLevel = false;
+                (var newSkill, var skillTreeWeapon) = await ChooseSkill();
+                if (newSkill != null)
                 {
-                    weaponOverride = newWeapon;
+                    weaponOverride ??= skillTreeWeapon;
+                    chosenSkills.Add(newSkill);
+                    aquiredLevel = true;
+                    playerHealth += newSkill.HealthBonus;
                 }
-                chosenSkills.Add(newSkill);
-                playerHealth += newSkill.HealthBonus;
-
                 if (weaponOverride != null) playerBuilder = playerBuilder.OverrideWeapon(weaponOverride);
-                playerBuilder = playerBuilder.OverrideHealth(new Health(playerHealth)).OverrideStats(defaultStats);
-
-
+                IEntityStats aquireStats = defaultStats;
+                
                 // SETUP
                 foreach (var S in chosenSkills)
                 {
-                    playerBuilder = playerBuilder.AddSkill(S.CreateSkill());
+                    var ingameSkill = S.CreateSkill();
+                    aquireStats = ingameSkill.ModifySelfStats(aquireStats);
+                    playerBuilder = playerBuilder.AddSkill(ingameSkill);
                 }
+                if (aquiredLevel)
+                {
+                    playerHealth += aquireStats.Endurance;
+                }
+                playerBuilder = playerBuilder.OverrideHealth(new Health(playerHealth)).OverrideStats(defaultStats);
+
                 var fights = m_Settings.EntityRepository.GetFights().ToList();
                 var chosenFight = fights[m_Settings.Random.GetRange(0, fights.Count)];
 
