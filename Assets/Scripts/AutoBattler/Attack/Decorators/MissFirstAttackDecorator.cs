@@ -1,32 +1,17 @@
 ﻿namespace AutoBattler
 {
-    internal class MissFirstAttackDecorator : IAttackBuilder
+    internal class MissFirstAttackDecorator : AttackDecorator
     {
-        private IAttackBuilder bldr;
-        public MissFirstAttackDecorator(IAttackBuilder bldr)
+        public MissFirstAttackDecorator(IAttackBuilder bldr): base(bldr)
         {
-            this.bldr = bldr;
         }
-
-        public IEntityStats OpposingStats => bldr.OpposingStats;
-
-        public IAttackBuilder WithAttack(AttackType src, float damage)
+        protected override IAttackBuilder OnAttack(AttackType src, float damage, IAttackBuilder decorated)
         {
-            if(src != AttackType.Ability)
+            if (src != AttackType.Ability)
             {
                 damage = 0;
             }
-            bldr = bldr.WithAttack(src, damage);
-            return this;
-        }
-        public IAttackBuilder WithAttackerStats(IEntityStats stats)
-        {
-            bldr = bldr.WithAttackerStats(stats);
-            return this;
-        }
-        public IAttack Build()
-        {
-            return bldr.Build();
+            return base.OnAttack(src, damage, decorated);
         }
     }
 }

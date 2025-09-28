@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using AutoBattler;
+using AutoBattler.Skills;
 namespace Game.Repositories
 {
     [CreateAssetMenu(fileName = "Stat Change Skill", menuName = "Scriptable Objects/Skills/Stat Change Skill")]

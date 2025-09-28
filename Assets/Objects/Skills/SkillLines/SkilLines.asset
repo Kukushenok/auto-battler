@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SkilLines
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.PlayerSkillChooseRepository
   SkillSets:
-  - {fileID: 11400000, guid: 577d6061d1d4b244ba52f258adac4780, type: 2}
+  - {fileID: 11400000, guid: 9e4e3a838b0814441a1db23606b6da22, type: 2}
   - {fileID: 11400000, guid: 577d6061d1d4b244ba52f258adac4780, type: 2}

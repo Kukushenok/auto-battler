@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoBattler
+namespace AutoBattler.Skills
 {
     /// <summary>
     /// TODO: IT IS NOT A DECORATOR, BUT IT MIGHT BE.
