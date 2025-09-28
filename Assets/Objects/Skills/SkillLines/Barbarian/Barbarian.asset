@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 231da5c00cadf134aa192f137c81a32f, type: 3}
-  m_Name: BasicClass
+  m_Name: Barbarian
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.PlayerClassSkillBranch
   <Skills>k__BackingField:
-  - {fileID: 11400000, guid: 481b5366cec807b4dbe2dd2127af2700, type: 2}
-  - {fileID: 11400000, guid: 481b5366cec807b4dbe2dd2127af2700, type: 2}
-  - {fileID: 11400000, guid: 481b5366cec807b4dbe2dd2127af2700, type: 2}
-  <StartingWeapon>k__BackingField: {fileID: 11400000, guid: caa8beec0dd59c24ea380b4f5be024fd, type: 2}
+  - {fileID: 11400000, guid: 179e01110d9b82946b11a31d5cfa66ae, type: 2}
+  - {fileID: 11400000, guid: 1226e30842635344085071f717a6e08a, type: 2}
+  - {fileID: 11400000, guid: 93f2aededdaadf1489a70f25aca15a53, type: 2}
+  <StartingWeapon>k__BackingField: {fileID: 11400000, guid: b4d8e9b9b69291541b0464d279db6ac6, type: 2}

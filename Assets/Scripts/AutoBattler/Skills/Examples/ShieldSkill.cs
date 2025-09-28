@@ -6,7 +6,6 @@
         {
             private bool triggers = false;
             private float savingHP = 0;
-            private float damageCounter = 0;
             public ShieldDecorator(IAttackBuilder decorating, float saveHP) : base(decorating)
             {
                 this.savingHP = saveHP;
@@ -16,19 +15,10 @@
             {
                 if (triggers)
                 {
-                    if (damageCounter <= savingHP) savingHP = damageCounter;
+                    // The Builder is responsible to set Damage to zero if the total damage is negative.
                     decorating = decorating.WithAttack(AttackType.Ability, -savingHP);
                 }
                 return base.OnBuild(decorating);
-            }
-            /// <summary>
-            /// TODO: the damageCounter would count even the cancelled damage down the pipeline,
-            /// so it is not idenpotent and 100% accurate. Rewrite if nessesary
-            /// </summary>
-            protected override IAttackBuilder OnAttack(AttackType src, float damage, IAttackBuilder decorated)
-            {
-                damageCounter += damage;
-                return base.OnAttack(src, damage, decorated);
             }
             protected override IAttackBuilder OnAttackerStats(IEntityStats stats, IAttackBuilder decorating)
             {

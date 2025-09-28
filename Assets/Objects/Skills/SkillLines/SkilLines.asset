@@ -15,4 +15,5 @@ MonoBehaviour:
   skillSets:
   - {fileID: 11400000, guid: 9e4e3a838b0814441a1db23606b6da22, type: 2}
   - {fileID: 11400000, guid: 5e893b1a6f2e18c448393b182de96a7e, type: 2}
+  - {fileID: 11400000, guid: 903f4f89229bb37498a0eb971ae20e84, type: 2}
   limitLevel: 3

@@ -4,14 +4,16 @@
     {
         private class DoubledownDecorator : AttackDecorator
         {
+            private bool enabled = true;
             public DoubledownDecorator(IAttackBuilder decorating) : base(decorating)
             {
             }
             protected override IAttackBuilder OnAttack(AttackType src, float damage, IAttackBuilder decorated)
             {
-                if (src != AttackType.Ability)
+                if (src != AttackType.Ability && enabled)
                 {
                     decorated = decorated.WithAttack(AttackType.Ability, damage);
+                    enabled = false;
                 }
                 return base.OnAttack(src, damage, decorated);
             }

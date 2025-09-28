@@ -18,4 +18,5 @@ MonoBehaviour:
   Dexterity: 3
   Endurance: 1
   DefaultWeapon: {fileID: 11400000, guid: 50d8b487f200697408858df6d89c0074, type: 2}
-  DefaultSkills: []
+  DefaultSkills:
+  - {fileID: 11400000, guid: fd4dd600cbb1059468dd1ab9a62dbc64, type: 2}
