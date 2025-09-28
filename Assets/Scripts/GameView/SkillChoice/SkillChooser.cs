@@ -42,7 +42,7 @@ namespace Game.View
             while(skillChoices.Count > 0)
             {
                 await skillChoices[0].Hide();
-                Destroy(skillChoices[0]);
+                Destroy(skillChoices[0].gameObject);
                 skillChoices.RemoveAt(0);
             }
             await WindowAnimator.Hide();

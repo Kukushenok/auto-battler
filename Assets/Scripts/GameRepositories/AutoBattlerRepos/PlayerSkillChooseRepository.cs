@@ -13,12 +13,7 @@ namespace Game.Repositories
         
         public ISkillRepository CreateRepo()
         {
-            Queue<SkillDescriptorSO>[] queues = new Queue<SkillDescriptorSO>[SkillSets.Length];
-            for(int i = 0; i < queues.Length; i++)
-            {
-                queues[i] = new Queue<SkillDescriptorSO>(SkillSets[i].Skills);
-            }
-            return new PlayerSkillLines(queues);
+            return new PlayerSkillLines(SkillSets);
         }
     }
 }

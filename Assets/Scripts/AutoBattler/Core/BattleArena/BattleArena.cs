@@ -14,7 +14,7 @@ namespace AutoBattler
         public IEnumerable<IBattleEvent> DoBattle(IBattleEntity entityA, IBattleEntity entityB)
         {
             bool isPlayer = true;
-            while (!entityB.Health.IsDead)
+            while (!entityA.Health.IsDead && !entityB.Health.IsDead)
             {
                 bool check = GetRandomCheck(entityA.Stats, entityB.Stats, isPlayer, out var S);
                 yield return S;

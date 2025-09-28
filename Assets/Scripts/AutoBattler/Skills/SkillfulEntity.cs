@@ -20,6 +20,7 @@ namespace AutoBattler
             skinID = SkinID;
             Health = HP;
             Skills = skills.ToList();
+            Weapon = weapon;
             foreach(var S in Skills)
             {
                 stats = S.ModifySelfStats(stats);

@@ -8,37 +8,63 @@ using System.Threading.Tasks;
 
 namespace Game.Repositories
 {
+    public class SkillLine: ISkillTree
+    {
+        private Queue<SkillDescriptorSO> line;
+        private IWeapon startingWeapon;
+        public SkillLine(IEnumerable<SkillDescriptorSO> descriptors, IWeapon startingWeapon)
+        {
+            this.startingWeapon = startingWeapon;
+            line = new Queue<SkillDescriptorSO>(descriptors);
+        }
+
+        public bool IsExausted => line.Count == 0;
+
+        public ISkillDescriptor GetCurrentSkill()
+        {
+            if(line.TryPeek(out var result)) return result;
+            return null;
+        }
+
+        public IWeapon GetStartingWeapon()
+        {
+            return startingWeapon;
+        }
+        public void AddLevel()
+        {
+            line.Dequeue();
+        }
+    }
     class PlayerSkillLines : ISkillRepository
     {
-        private Queue<SkillDescriptorSO>[] skillLines;
-        public PlayerSkillLines(Queue<SkillDescriptorSO>[] skills)
+        private SkillLine[] skillLines;
+        public PlayerSkillLines(PlayerClassSkillBranch[] branches)
         {
-            skillLines = skills;
+            skillLines = new SkillLine[branches.Length];
+            for(int i = 0; i < skillLines.Length; i++)
+            {
+                skillLines[i] = new SkillLine(branches[i].Skills, branches[i].StartingWeapon);
+            }
         }
-        public void Choose(ISkillDescriptor descriptor)
+
+        public void Choose(ISkillTree descriptor)
         {
             foreach(var Q in skillLines)
             {
-                if (Q.TryPeek(out SkillDescriptorSO so))
+                if(Q == descriptor)
                 {
-                    if(so.ID == descriptor.ID)
-                    {
-                        Q.Dequeue();
-                        return;
-                    }
+                    Q.AddLevel();
+                    return;
                 }
             }
             throw new InvalidOperationException("The skill should be from GetSkills operation");
         }
 
-        public IEnumerable<ISkillDescriptor> GetSkills()
+        IEnumerable<ISkillTree> ISkillRepository.GetSkills()
         {
-            foreach(var Q in skillLines)
+            foreach (var Q in skillLines)
             {
-                if (Q.TryPeek(out SkillDescriptorSO so))
-                {
-                    yield return so;
-                }
+                yield return Q;
             }
         }
     }
