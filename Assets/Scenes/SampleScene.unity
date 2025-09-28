@@ -1033,8 +1033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -17.2}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -43.94, y: -17.2}
+  m_SizeDelta: {x: 87.89, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474854029
 MonoBehaviour:
@@ -1048,9 +1048,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c868cfbe1c091f04ba6c20caca053d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
-  baseColor: {r: 0.59607846, g: 0.90810496, b: 1, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0}'
+  format: "\u0410\u0422\u041A {0}"
 --- !u!114 &474854030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1692,8 +1692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -28.309998}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -43.94, y: -28.309998}
+  m_SizeDelta: {x: 87.89, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617356693
 MonoBehaviour:
@@ -1707,9 +1707,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c868cfbe1c091f04ba6c20caca053d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
-  baseColor: {r: 1, g: 0.59607846, b: 0.9601795, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0}'
+  format: "\u041B\u041E\u0412 {0}"
 --- !u!114 &617356694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1982,8 +1982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -39.42}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -43.94, y: -39.42}
+  m_SizeDelta: {x: 87.89, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678990994
 MonoBehaviour:
@@ -1997,9 +1997,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c868cfbe1c091f04ba6c20caca053d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
-  baseColor: {r: 0.70122325, g: 1, b: 0.59607846, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0}'
+  format: "\u0412\u042B\u041D {0}"
 --- !u!114 &678990995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2053,7 +2053,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -7429,8 +7429,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -39.42}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -36.09, y: -39.42}
+  m_SizeDelta: {x: 72.19, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941422740
 MonoBehaviour:
@@ -7444,9 +7444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c868cfbe1c091f04ba6c20caca053d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
-  baseColor: {r: 0.70122325, g: 1, b: 0.59607846, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0}'
+  format: "\u0412\u042B\u041D {0}"
 --- !u!114 &941422741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7470,7 +7470,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7500,7 +7500,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -7781,8 +7781,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -17.2}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -36.09, y: -17.2}
+  m_SizeDelta: {x: 72.19, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018083513
 MonoBehaviour:
@@ -7796,9 +7796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c868cfbe1c091f04ba6c20caca053d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
-  baseColor: {r: 0.59607846, g: 0.90810496, b: 1, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0}'
+  format: "\u0410\u0422\u041A {0}"
 --- !u!114 &1018083514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7822,7 +7822,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7852,7 +7852,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -8112,9 +8112,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.0067911716
+    y: 0.035256412
     width: 1
-    height: 0.9849916
+    height: 0.92974365
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -8331,8 +8331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.75, y: 2.300003}
-  m_SizeDelta: {x: 17.32, y: 11.11}
+  m_AnchoredPosition: {x: 6.67, y: 2.6}
+  m_SizeDelta: {x: 31.65, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186224872
 MonoBehaviour:
@@ -8346,9 +8346,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5162454331859944c99631951aada970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
-  baseColor: {r: 0, g: 0.5032332, b: 0.63522005, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0:0}'
+  format: + {0:0}
 --- !u!114 &1186224873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8372,7 +8372,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8402,8 +8402,8 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -8483,8 +8483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -5.5549965}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -43.94, y: -5.5549965}
+  m_SizeDelta: {x: 87.89, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1193782552
 MonoBehaviour:
@@ -8509,7 +8509,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8539,7 +8539,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -8599,7 +8599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0:0}'
+  format: "\u041E\u0417 {0:0}"
 --- !u!1 &1220247757
 GameObject:
   m_ObjectHideFlags: 0
@@ -8880,8 +8880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -28.309998}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -36.09, y: -28.309998}
+  m_SizeDelta: {x: 72.19, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487518256
 MonoBehaviour:
@@ -8895,9 +8895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c868cfbe1c091f04ba6c20caca053d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
-  baseColor: {r: 1, g: 0.59607846, b: 0.9601795, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0}'
+  format: "\u041B\u041E\u0412 {0}"
 --- !u!114 &1487518257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8921,7 +8921,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8951,7 +8951,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -18708,8 +18708,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.75, y: 2.300003}
-  m_SizeDelta: {x: 17.32, y: 11.11}
+  m_AnchoredPosition: {x: 5.33, y: 2.5999947}
+  m_SizeDelta: {x: 28.99, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1647388438
 MonoBehaviour:
@@ -18723,9 +18723,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5162454331859944c99631951aada970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
-  baseColor: {r: 0, g: 0.5032332, b: 0.63522005, a: 1}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0:0}'
+  format: + {0:0}
 --- !u!114 &1647388439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18749,7 +18749,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18779,8 +18779,8 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -28988,8 +28988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -13.305, y: -5.5549965}
-  m_SizeDelta: {x: 26.61, y: 11.110001}
+  m_AnchoredPosition: {x: -36.09, y: -5.5549965}
+  m_SizeDelta: {x: 72.19, y: 11.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021947252
 MonoBehaviour:
@@ -29005,7 +29005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0:0}'
+  format: "\u041E\u0417 {0:0}"
 --- !u!114 &2021947253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29029,7 +29029,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29059,7 +29059,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
