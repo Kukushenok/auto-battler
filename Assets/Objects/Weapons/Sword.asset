@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4139c60834d70494f83d9f4e4b709749, type: 3}
-  m_Name: KnifeWeapon
+  m_Name: Sword
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.WeaponSO
   <Skin>k__BackingField: {fileID: 0}
-  <Name>k__BackingField: "\u041A\u0438\u043D\u0436\u0430\u043B"
-  <Source>k__BackingField: 3
-  <Damage>k__BackingField: 2
+  <Name>k__BackingField: "\u041C\u0435\u0447"
+  <Source>k__BackingField: 1
+  <Damage>k__BackingField: 3

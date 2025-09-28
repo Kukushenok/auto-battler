@@ -3,7 +3,7 @@ using AutoBattler;
 using AutoBattler.Skills;
 namespace Game.Repositories
 {
-    [CreateAssetMenu(fileName = "Stat Change Skill", menuName = "Scriptable Objects/Skills/Stat Change Skill")]
+    [CreateAssetMenu(fileName = "Stat Change Skill", menuName = "Scriptable Objects/Skills/Types/Stat Change Skill")]
     public class ChangeStatsSkillDescriptorSO : SkillDescriptorSO
     {
         [field: SerializeField] private int AddStrength;
