@@ -1233,13 +1233,13 @@ MonoBehaviour:
     schedulerType: 0
     additionalSettings: 0
   attackSettings:
-    Frequency: 0
-    DampingRatio: 10
+    Frequency: 5
+    DampingRatio: 0.2
     RandomSeed: 0
   hideSettings:
     startValue: {r: 1, g: 1, b: 1, a: 1}
     endValue: {r: 1, g: 1, b: 1, a: 0}
-    duration: 1
+    duration: 0
     ease: 13
     customEaseCurve:
       serializedVersion: 2
@@ -1511,7 +1511,7 @@ GameObject:
   - component: {fileID: 600906731}
   - component: {fileID: 600906732}
   m_Layer: 0
-  m_Name: LifetimeScope
+  m_Name: DX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7628,8 +7628,8 @@ MonoBehaviour:
     schedulerType: 0
     additionalSettings: 0
   attackSettings:
-    Frequency: 0
-    DampingRatio: 10
+    Frequency: 5
+    DampingRatio: 0.2
     RandomSeed: 0
   hideSettings:
     startValue: {r: 1, g: 1, b: 1, a: 1}
@@ -8044,10 +8044,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.049227796
+    x: 0
     y: 0
-    width: 0.9014754
-    height: 1
+    width: 0
+    height: 0
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

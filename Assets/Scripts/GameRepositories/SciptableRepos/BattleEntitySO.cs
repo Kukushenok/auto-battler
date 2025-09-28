@@ -15,6 +15,7 @@ namespace Game.Repositories
         [SerializeField] private int Strength;
         [SerializeField] private int Dexterity;
         [SerializeField] private int Endurance;
+        [SerializeField] private WeaponSO DefaultWeapon;
         [SerializeField] private List<SkillDescriptorSO> DefaultSkills;
 
         public IBattleEntityBuilder Get()
@@ -23,6 +24,7 @@ namespace Game.Repositories
             builder.OverrideHealth(new Health(Health));
             builder.OverrideStats(new EntityStats(Strength, Dexterity, Endurance));
             DefaultSkills.ForEach(S => builder.AddSkill(S.CreateSkill()));
+            if(DefaultWeapon != null) builder.OverrideWeapon(DefaultWeapon);
             return builder;
         }
     }

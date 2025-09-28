@@ -42,6 +42,7 @@ namespace Game.View
             await DoHide();
             state = State.Hidden;
         }
+        protected void SetHidden() => state = State.Hidden;
     }
     /// <summary>
     /// Life cycle is supposed to be:

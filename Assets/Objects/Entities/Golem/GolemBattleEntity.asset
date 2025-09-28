@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.BattleEntitySO
   Skin: {fileID: 11400000, guid: 86471e9232981514b96239d1dba44ef9, type: 2}
   Health: 10
-  Strength: 1
-  Dexterity: 2
-  Endurance: 2
+  Strength: 3
+  Dexterity: 1
+  Endurance: 3
+  DefaultWeapon: {fileID: 11400000, guid: c37604402cc494549accff87fecd781e, type: 2}
   DefaultSkills: []

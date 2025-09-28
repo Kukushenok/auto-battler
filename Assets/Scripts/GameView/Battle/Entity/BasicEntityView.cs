@@ -17,12 +17,20 @@ namespace Game.View
         private SpriteRenderer currentPrefabInstance;
         public override async UniTask Die()
         {
-            await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
+            if (currentPrefabInstance != null)
+                await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
+            Destroy(currentPrefabInstance.gameObject);
+            currentPrefabInstance = null;
+            SetHidden();
         }
 
         protected override async UniTask DoHide()
         {
-            await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
+            if(currentPrefabInstance != null)
+                await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
+            Destroy(currentPrefabInstance.gameObject);
+            currentPrefabInstance = null;
+
         }
 
         protected override async UniTask DoInit(BattleEntitySkinSO value)
@@ -38,14 +46,16 @@ namespace Game.View
 
         protected override async UniTask BasicAttack(AttackType src, float damage)
         {
-            Debug.Log(src);
-            await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, Vector3.one * 0.2f, 0.5f).WithOptions(attackSettings).BindToLocalPosition(currentPrefabInstance.transform);
+            Debug.Log(damage);
+            await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, Vector3.one * 0.2f, 0.5f)
+                 .WithDampingRatio(attackSettings.DampingRatio * Mathf.Clamp(0, 5, 5 - damage)).BindToLocalPosition(currentPrefabInstance.transform);
         }
 
         protected override async UniTask OtherAttack(string animID, AttackType src, float damage)
         {
-            Debug.Log(animID);
-            await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, Vector3.one * 0.2f, 0.5f).WithOptions(attackSettings).BindToLocalPosition(currentPrefabInstance.transform);
+            Debug.Log(damage);
+            await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, Vector3.one * 0.2f, 0.5f)
+              .WithDampingRatio(attackSettings.DampingRatio * Mathf.Clamp(0, 5, 5 - damage / 2)).BindToLocalPosition(currentPrefabInstance.transform);
         }
     }
 }
