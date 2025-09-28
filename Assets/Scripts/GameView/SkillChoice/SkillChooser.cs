@@ -5,6 +5,7 @@ using Game.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using VContainer;
 
 namespace Game.View
 {
@@ -14,6 +15,12 @@ namespace Game.View
         [SerializeField] private Transform CoreTransform;
         [SerializeField] private MonoBehaviorSection WindowAnimator;
         private IRegistry<SkillDescriptorSO> descriptorRepo;
+        [Inject]
+        private void Construct(IRegistry<SkillDescriptorSO> descriptors)
+        {
+            descriptorRepo = descriptors;
+        } 
+        
 
         public async UniTask<ISkillDescriptor> ChooseFrom(IEnumerable<ISkillDescriptor> skillDescriptors)
         {

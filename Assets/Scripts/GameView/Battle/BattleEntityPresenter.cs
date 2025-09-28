@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using Game.Registries;
 using Game.Repositories;
 using UnityEngine;
+using VContainer;
 
 namespace Game.View
 {
@@ -17,6 +18,14 @@ namespace Game.View
         private IRegistry<BattleEntitySkinSO> skinRepo;
         private IRegistry<WeaponSO> weaponRepo;
         private HealthStats lastHealthStats;
+        [Inject]
+        private void Construct(IRegistry<WeaponSO> descriptors, IRegistry<BattleEntitySkinSO> skins)
+        {
+            weaponRepo = descriptors;
+            skinRepo = skins;
+        }
+
+
         public async UniTask Die()
         {
             await entityView.Die();

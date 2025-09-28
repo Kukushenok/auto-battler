@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0fa41d532afc742b174a674ae96384, type: 3}
   m_Name: FightRepository
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.FightRepository
-  Fights: []
+  Fights:
+  - BattleEntity: {fileID: 11400000, guid: 96d645b462df73b4493c6f59ccfabaa1, type: 2}
+    Reward: {fileID: 11400000, guid: caa8beec0dd59c24ea380b4f5be024fd, type: 2}

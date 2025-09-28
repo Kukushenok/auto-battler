@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45945a2fc82f2649bd63e9ac1a5597a, type: 3}
   m_Name: BasePlayerSkin
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.BattleEntitySkinSO
-  <Skin>k__BackingField: {fileID: 0}
+  <Skin>k__BackingField: {fileID: 8922773260430947485, guid: 5b70e6d6e369c014084b0d993324449c, type: 3}
   <Name>k__BackingField: "\u0418\u0413\u0420\u041E\u041A"

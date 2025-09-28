@@ -1,0 +1,16 @@
+﻿using UnityEngine;
+using AutoBattler;
+namespace Game.Repositories
+{
+    [CreateAssetMenu(fileName = "Stat Change Skill", menuName = "Scriptable Objects/Skills/Stat Change Skill")]
+    public class ChangeStatsSkillDescriptorSO : SkillDescriptorSO
+    {
+        [field: SerializeField] private int AddStrength;
+        [field: SerializeField] private int AddDexterity;
+        [field: SerializeField] private int AddEndurance;
+        public override IGameSkill CreateSkill()
+        {
+            return new StatEditSkill(new EntityStats(AddStrength, AddDexterity, AddEndurance));
+        }
+    }
+}

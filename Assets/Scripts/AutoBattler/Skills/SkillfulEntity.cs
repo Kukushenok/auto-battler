@@ -7,6 +7,7 @@ namespace AutoBattler
 {
     public class SkillfulEntity : IBattleEntity
     {
+        private string skinID;
         public IEntityStats Stats { get; private set; }
 
         public IHealth Health { get; private set; }
@@ -16,7 +17,8 @@ namespace AutoBattler
         private List<IGameSkill> Skills;
         public SkillfulEntity(string SkinID, IHealth HP, IEntityStats stats, IEnumerable<IGameSkill> skills, IWeapon weapon = null)
         {
-            HP = Health;
+            skinID = SkinID;
+            Health = HP;
             Skills = skills.ToList();
             foreach(var S in Skills)
             {
@@ -58,6 +60,7 @@ namespace AutoBattler
 
         public void Visualize(IBattleEntityPresenter presenter)
         {
+            presenter.UseSkin(skinID);
             presenter.WithStats(Stats);
             if (Weapon != null) presenter.WithWeapon(Weapon);
             presenter.WithHealth(Health);

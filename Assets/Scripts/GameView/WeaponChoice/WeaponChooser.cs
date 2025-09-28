@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Game.Registries;
 using Game.Repositories;
 using UnityEngine;
+using VContainer;
 
 namespace Game.View
 {
@@ -10,10 +11,14 @@ namespace Game.View
     {
         [SerializeField] private MonoBehaviourView<WeaponChoice> currentWeaponView;
         [SerializeField] private MonoBehaviourView<WeaponChoice> alternativeWeaponView;
-        [SerializeField] private Transform CoreTransform;
         [SerializeField] private MonoBehaviorSection WindowAnimator;
 
         private IRegistry<WeaponSO> Weapons;
+        [Inject]
+        private void Construct(IRegistry<WeaponSO> descriptors)
+        {
+            Weapons = descriptors;
+        }
         public async UniTask<IWeapon> ChooseFrom(IWeapon current, IWeapon alternate)
         {
             await WindowAnimator.Show();

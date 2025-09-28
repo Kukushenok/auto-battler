@@ -16,6 +16,7 @@ namespace Game.View
         private void Awake()
         {
             text = GetComponent<TextMeshProUGUI>();
+            text.color = transparent;
         }
         public override async UniTask Hide()
         {

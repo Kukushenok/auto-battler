@@ -6,16 +6,10 @@ using UnityEngine;
 
 namespace Game.Repositories
 {
-    [CreateAssetMenu(fileName = "Skill Line Definition", menuName = "Scriptable Objects/Skills/Skill Line Definition")]
+    [CreateAssetMenu(fileName = "Skill Line Definition", menuName = "Scriptable Objects/Skills/Branch/Repository")]
     public class PlayerSkillChooseRepository: ScriptableObject
     {
-        [Serializable]
-        private struct SkillSet
-        {
-            public List<SkillDescriptorSO> Skills;
-            public WeaponSO StartingWeapon;
-        }
-        [SerializeField] private SkillSet[] SkillSets;
+        [SerializeField] private PlayerClassSkillBranch[] SkillSets;
         
         public ISkillRepository CreateRepo()
         {

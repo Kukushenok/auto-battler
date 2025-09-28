@@ -12,27 +12,27 @@ namespace Game.View
         public override UniTask Hide()
         {
             return UniTask.WhenAll(
-                strength?.Hide() ?? UniTask.CompletedTask,
-                dexterity?.Hide() ?? UniTask.CompletedTask,
-                endurance?.Hide() ?? UniTask.CompletedTask
+                strength.TryHide(),
+                dexterity.TryHide(),
+                endurance.TryHide()
                 );
         }
 
         public override UniTask InitValueAsync(IEntityStats value)
         {
             return UniTask.WhenAll(
-                strength?.InitValueAsync(value.Strength) ?? UniTask.CompletedTask,
-                dexterity?.InitValueAsync(value.Dexterity) ?? UniTask.CompletedTask,
-                endurance?.InitValueAsync(value.Endurance) ?? UniTask.CompletedTask
+                strength.TryInit(value.Strength),
+                dexterity.TryInit(value.Dexterity),
+                endurance.TryInit(value.Endurance)
                 );
         }
 
         public override UniTask UpdateValue(IEntityStats value)
         {
             return UniTask.WhenAll(
-                strength?.UpdateValue(value.Strength) ?? UniTask.CompletedTask,
-                dexterity?.UpdateValue(value.Dexterity) ?? UniTask.CompletedTask,
-                endurance?.UpdateValue(value.Endurance) ?? UniTask.CompletedTask
+                strength.TryUpdate(value.Strength),
+                dexterity.TryUpdate(value.Dexterity),
+                endurance.TryUpdate(value.Endurance)
                 );
         }
     }

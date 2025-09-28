@@ -48,9 +48,9 @@ MonoBehaviour:
     TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
-  player: {fileID: 0}
-  fightRepository: {fileID: 0}
-  battleEntitySkins: {fileID: 0}
-  weaponRepository: {fileID: 0}
-  skillChooseRepository: {fileID: 0}
-  skillRepository: {fileID: 0}
+  player: {fileID: 11400000, guid: 655ea1430b4bbed458df2e7088079758, type: 2}
+  fightRepository: {fileID: 11400000, guid: 8f09e47e640b06048a2f4dd330511d24, type: 2}
+  battleEntitySkins: {fileID: 11400000, guid: c2e2f57453aaf7f43922abbda6a46a1b, type: 2}
+  weaponRepository: {fileID: 11400000, guid: 8ebfa271a25bc974a87b1128cd5d5295, type: 2}
+  skillChooseRepository: {fileID: 11400000, guid: 0b66015e074746f48bc4a6f5cbc2bc07, type: 2}
+  skillRepository: {fileID: 11400000, guid: 141f1b2198f76514f80623ba10f7e5f1, type: 2}
