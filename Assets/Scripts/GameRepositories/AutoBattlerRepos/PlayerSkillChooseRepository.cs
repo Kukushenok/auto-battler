@@ -17,7 +17,7 @@ namespace Game.Repositories
         }
         [SerializeField] private SkillSet[] SkillSets;
         
-        public ISkillRepository GetInstance()
+        public ISkillRepository CreateRepo()
         {
             Queue<SkillDescriptorSO>[] queues = new Queue<SkillDescriptorSO>[SkillSets.Length];
             for(int i = 0; i < queues.Length; i++)

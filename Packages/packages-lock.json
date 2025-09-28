@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "com.annulusgames.lit-motion": {
+      "version": "https://github.com/annulusgames/LitMotion.git?path=src/LitMotion/Assets/LitMotion",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.burst": "1.6.0",
+        "com.unity.collections": "1.5.1",
+        "com.unity.mathematics": "1.0.1"
+      },
+      "hash": "b651c5866fe0e3fba065ce2e56dfdfcd59d3d109"
+    },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
@@ -105,7 +116,7 @@
     },
     "com.unity.burst": {
       "version": "1.8.24",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
@@ -297,6 +308,13 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "jp.hadashikick.vcontainer": {
+      "version": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.17.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "177dbda557fd652ce7f5d1647a3621653e094373"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
