@@ -30,7 +30,15 @@ namespace AutoBattler
             {
                 builder = S.ModifyEnemy(builder);
             }
-            builder = builder.Append(AttackType.Piercing, 10 + Stats.Strength);
+            builder = builder.WithAttackerStats(Stats);
+            if (Weapon != null)
+            {
+                builder = builder.WithAttack(Weapon.Source, Weapon.Damage + Stats.Strength);
+            }
+            else
+            {
+                builder = builder.WithAttack(AttackType.Ability, Stats.Strength);
+            }
             foreach (var S in Skills)
             {
                 builder = S.AttackEnemy(builder);
@@ -40,7 +48,7 @@ namespace AutoBattler
 
         public IAttackBuilder GetAttackBuilder()
         {
-            IAttackBuilder atk = new BasicAttackBuilder();
+            IAttackBuilder atk = new BasicAttackBuilder(Stats);
             foreach(var S in Skills)
             {
                 atk = S.ModifySelf(atk);

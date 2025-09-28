@@ -9,39 +9,6 @@ using UnityEngine;
 
 namespace AutoBattler
 {
-    public interface IEntityStats
-    {
-        public int Strength { get; }
-        public int Dexterity { get; }
-        public int Endurance { get; }
-    }
-    public interface IBattleEntity: IAttacker, IAttackable
-    {
-        public IEntityStats Stats { get; }
-        public IWeapon Weapon { get; }
-        public void Visualize(IBattleEntityPresenter presenter);
-    }
-    public interface IBattleEntityBuilder
-    {
-        public IBattleEntity Build();
-        public IBattleEntityBuilder OverrideHealth(IHealth health);
-        public IBattleEntityBuilder OverrideStats(IEntityStats stats);
-        public IBattleEntityBuilder OverrideWeapon(IWeapon weapon);
-        public IBattleEntityBuilder AddSkill(IGameSkill skill);
-    }
-    public interface IHealth
-    {
-        public float HP { get; }
-        public float MaxHP { get; }
-        public bool IsDead { get; }
-        internal void DoDamage(float damage);
-    }
-    public interface IWeapon
-    {
-        public string Name { get; }
-        public AttackType Source { get; }
-        public float Damage { get; }
-    }
     public class AutoBattler: IPlayable
     {
         public struct Settings
