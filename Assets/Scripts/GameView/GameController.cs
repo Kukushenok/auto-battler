@@ -1,10 +1,12 @@
 using AutoBattler;
 using AutoBattler.External;
 using Cysharp.Threading.Tasks;
+using Game.View.ColorScheme;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using VContainer;
 
 namespace Game.View
 {
@@ -15,6 +17,12 @@ namespace Game.View
         [SerializeField] private WeaponChooser weaponChooser;
         [SerializeField] private MonoBehaviourProcess<bool> gameResultsScreen;
         [SerializeField] private MonoBehaviourProcess<IEntityStats> startStatsScreen;
+        private IColorSchemeManager colorSchemeManager;
+        [Inject]
+        private void Construct(IColorSchemeManager mng)
+        {
+            colorSchemeManager = mng;
+        }
         public IBattlerPresenter Battle()
         {
             return presenter;
@@ -37,7 +45,7 @@ namespace Game.View
 
         public Task ShowStage(int stage)
         {
-            Debug.Log("—“¿ƒ»ﬂ: " + stage);
+            colorSchemeManager.ChangeColorScheme();
             return Task.CompletedTask;
         }
 

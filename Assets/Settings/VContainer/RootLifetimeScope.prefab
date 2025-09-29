@@ -49,6 +49,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   player: {fileID: 11400000, guid: 655ea1430b4bbed458df2e7088079758, type: 2}
+  colorSchemeSO: {fileID: 11400000, guid: 84e6ed5a1b4b9d24fbd878b6bb380789, type: 2}
   fightRepository: {fileID: 11400000, guid: 8f09e47e640b06048a2f4dd330511d24, type: 2}
   battleEntitySkins: {fileID: 11400000, guid: c2e2f57453aaf7f43922abbda6a46a1b, type: 2}
   weaponRepository: {fileID: 11400000, guid: 8ebfa271a25bc974a87b1128cd5d5295, type: 2}
