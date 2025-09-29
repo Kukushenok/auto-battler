@@ -32,7 +32,7 @@ namespace Game.View
         }
         public UniTask Hide()
         {
-            return UniTask.WhenAll(healthView.Hide(), statsView.Hide(), weaponView.Hide(), entityView.Hide());
+            return UniTask.WhenAll(healthView.TryHide(), statsView.TryHide(), weaponView.TryHide(), entityView.TryHide());
         }
         public UniTask UpdateHealth(float newHP)
         {

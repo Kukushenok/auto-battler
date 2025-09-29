@@ -1,3 +1,4 @@
+using AutoBattler;
 using Cysharp.Threading.Tasks;
 using LitMotion;
 using LitMotion.Extensions;
@@ -39,4 +40,5 @@ namespace Game.View
                 .WithDampingRatio(0f).Bind(x => transform.localScale = Vector3.one * x).ToUniTask();
         }
     }
+
 }
