@@ -30,8 +30,7 @@ namespace Game.View
 
         public async Task ReportDexterity(int wanted, int got, bool isPlayer)
         {
-            await DexterityCheckView.InitValueAsync(new DexterityCheck(got, wanted, isPlayer));
-            await DexterityCheckView.Hide();
+            await DexterityCheckView.Process(new DexterityCheck(got, wanted, isPlayer));
         }
 
         public async Task Run(IEnumerable<IBattleEvent> events)

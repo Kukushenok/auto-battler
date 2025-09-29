@@ -5,7 +5,7 @@ namespace Game.View
 {
     public class WeaponChoice : Choice
     {
-        public WeaponSO Weapon;
+        public readonly WeaponSO Weapon;
         public WeaponChoice(Action onChoosing, WeaponSO weapon) : base(onChoosing)
         {
             Weapon = weapon;

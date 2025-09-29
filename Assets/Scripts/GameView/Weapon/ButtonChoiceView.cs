@@ -7,6 +7,7 @@ namespace Game.View
     [RequireComponent(typeof(Button))]
     public class ButtonChoiceView : MonoBehaviourView<Choice>
     {
+        [SerializeField] private MonoBehaviorSection section;
         private Choice currentChoice;
         private Button btn;
         private void Awake()
@@ -20,13 +21,13 @@ namespace Game.View
         }
         protected override UniTask DoHide()
         {
-            return UniTask.CompletedTask;
+            return section.TryHide();
         }
 
         protected override UniTask DoInit(Choice value)
         {
             currentChoice = value;
-            return UniTask.CompletedTask;
+            return section.TryShow();
         }
 
         protected override UniTask DoUpdate(Choice value)

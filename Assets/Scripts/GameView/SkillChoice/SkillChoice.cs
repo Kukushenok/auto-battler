@@ -7,7 +7,7 @@ namespace Game.View
 {
     public class SkillChoice: Choice
     {
-        public SkillDescriptorSO Skill;
+        public readonly SkillDescriptorSO Skill;
         public SkillChoice(Action act, SkillDescriptorSO skill): base(act)
         {
             Skill = skill;

@@ -12,7 +12,7 @@ namespace Game.View
     {
         [SerializeField] private Color baseColor = Color.white;
         [SerializeField] private Color transparent = new Color(0, 0, 0, 0); 
-        [SerializeField] private string format = "{0}";
+        [SerializeField, Multiline] private string format = "{0}";
         private TextMeshProUGUI text;
         private void Awake()
         {

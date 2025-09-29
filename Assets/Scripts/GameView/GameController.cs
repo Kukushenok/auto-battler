@@ -13,6 +13,8 @@ namespace Game.View
         [SerializeField] private BaseBattlePresenter presenter;
         [SerializeField] private SkillChooser skillChooser;
         [SerializeField] private WeaponChooser weaponChooser;
+        [SerializeField] private MonoBehaviourProcess<bool> gameResultsScreen;
+        [SerializeField] private MonoBehaviourProcess<IEntityStats> startStatsScreen;
         public IBattlerPresenter Battle()
         {
             return presenter;
@@ -30,14 +32,18 @@ namespace Game.View
 
         public Task ShowGameOver(bool isGameWon)
         {
-            Debug.Log("»√–¿ ¬€…√–¿Õ¿: " + isGameWon);
-            return Task.CompletedTask;
+            return gameResultsScreen.Process(isGameWon).AsTask();
         }
 
         public Task ShowStage(int stage)
         {
             Debug.Log("—“¿ƒ»ﬂ: " + stage);
             return Task.CompletedTask;
+        }
+
+        public Task ShowStartingStats(IEntityStats stats)
+        {
+            return startStatsScreen.Process(stats).AsTask();
         }
     }
 }

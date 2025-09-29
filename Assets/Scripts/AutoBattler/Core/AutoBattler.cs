@@ -52,21 +52,21 @@ namespace AutoBattler
             }
             return (chosenSkill, resWeapon);
         }
+        private IEntityStats ChooseRandomStats() => new EntityStats(
+                m_Settings.Random.GetRange(1, 4),
+                m_Settings.Random.GetRange(1, 4),
+                m_Settings.Random.GetRange(1, 4)
+            );
         public async Task Play()
         {
             IWeapon weaponOverride = null;
             List<ISkillDescriptor> chosenSkills = new List<ISkillDescriptor>();
             float playerHealth = 0;
-            var defaultStats = new EntityStats(
-                m_Settings.Random.GetRange(1, 4),
-                m_Settings.Random.GetRange(1, 4),
-                m_Settings.Random.GetRange(1, 4)
-            );
+            var defaultStats = ChooseRandomStats();
+            await m_Settings.Controller.ShowStartingStats(defaultStats);
             for (int currRounds = 1; currRounds <= m_Settings.WinRoundsCount; currRounds++)
             {
                 await m_Settings.Controller.ShowStage(currRounds);
-
-                var playerBuilder = m_Settings.EntityRepository.GetPlayer();
 
                 // CHOOSE A SKILL
                 bool aquiredLevel = false;
@@ -78,10 +78,11 @@ namespace AutoBattler
                     aquiredLevel = true;
                     playerHealth += newSkill.HealthBonus;
                 }
+
+                // SETUP
+                var playerBuilder = m_Settings.EntityRepository.GetPlayer();
                 if (weaponOverride != null) playerBuilder = playerBuilder.OverrideWeapon(weaponOverride);
                 IEntityStats aquireStats = defaultStats;
-                
-                // SETUP
                 foreach (var S in chosenSkills)
                 {
                     var ingameSkill = S.CreateSkill();
@@ -94,10 +95,10 @@ namespace AutoBattler
                 }
                 playerBuilder = playerBuilder.OverrideHealth(new Health(playerHealth)).OverrideStats(defaultStats);
 
-                var fights = m_Settings.EntityRepository.GetFights().ToList();
-                var chosenFight = fights[m_Settings.Random.GetRange(0, fights.Count)];
 
                 // FIGHT
+                var fights = m_Settings.EntityRepository.GetFights().ToList();
+                var chosenFight = fights[m_Settings.Random.GetRange(0, fights.Count)];
                 var player = playerBuilder.Build();
                 var enemy = chosenFight.GetOpposingEntity().Build();
                 var section = new BattleArenaSection(m_Settings.Random, m_Settings.Controller.Battle(), player, enemy);

@@ -37,6 +37,7 @@ namespace Game.View
         protected override async UniTask DoInit(BattleEntitySkinSO value)
         {
             currentPrefabInstance = Instantiate(value.Skin, prefabTransform).GetComponent<SpriteRenderer>();
+            currentPrefabInstance.color = inSettings.StartValue;
             await LMotion.Create(inSettings).BindToColor(currentPrefabInstance).ToUniTask();
         }
 

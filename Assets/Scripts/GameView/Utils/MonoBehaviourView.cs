@@ -5,18 +5,8 @@ using UnityEngine;
 
 namespace Game.View
 {
-    public interface IView<X>
-    {
-        public UniTask InitValueAsync(X value);
-        public UniTask UpdateValue(X value);
-        public UniTask Hide();
-    }
-    /// <summary>
-    /// Life cycle is supposed to be:
-    /// Init -> Update (multiple times) -> Hide 
-    /// </summary>
-    /// <typeparam name="X"></typeparam>
-    public abstract class MonoBehaviourView<X>: MonoBehaviour, IView<X>
+
+    public abstract class MonoBehaviourView<X>: MonoBehaviour, IView<X>, IViewProcess<X>
     {
         public enum State { Initting, Initted, Hiding, Hidden}
         private State state = State.Hidden;
@@ -43,30 +33,12 @@ namespace Game.View
             state = State.Hidden;
         }
         protected void SetHidden() => state = State.Hidden;
-    }
-    /// <summary>
-    /// Life cycle is supposed to be:
-    /// Init -> Hide
-    /// </summary>
-    public abstract class MonoBehaviorSection: MonoBehaviour
-    {
-        public enum State { Initting, Initted, Hiding, Hidden }
-        private State state = State.Hidden;
-        public async UniTask Show()
+
+        public async UniTask Process(X value)
         {
             if (state != State.Hidden) return;
-            state = State.Initting;
-            await DoShow();
-            state = State.Initted;
+            await InitValueAsync(value);
+            await Hide();
         }
-        public async UniTask Hide()
-        {
-            if (state != State.Initted) return;
-            state = State.Hiding;
-            await DoHide();
-            state = State.Hidden;
-        }
-        protected abstract UniTask DoShow();
-        protected abstract UniTask DoHide();
     }
 }
