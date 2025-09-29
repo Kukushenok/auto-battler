@@ -7,11 +7,15 @@ namespace Game.View
     {
         [SerializeField] private MonoBehaviourView<Choice> Choicer;
         [SerializeField] private MonoBehaviourView<string> Name;
+        [SerializeField] private MonoBehaviourView<string> Description;
+        [SerializeField] private MonoBehaviorSection Section;
         protected override UniTask DoHide()
         {
             return UniTask.WhenAll(
                 Choicer.TryHide(),
-                Name.TryHide()
+                Name.TryHide(),
+                Description.TryHide(),
+                Section.TryHide()
              );
         }
 
@@ -19,7 +23,9 @@ namespace Game.View
         {
             return UniTask.WhenAll(
                     Choicer.TryInit(value),
-                    Name.TryInit(value.Skill.Name)
+                    Name.TryInit(value.Skill.Name),
+                    Description.TryInit(value.Skill.Description),
+                    Section.TryShow()
             );
         }
 
@@ -27,7 +33,8 @@ namespace Game.View
         {
             return UniTask.WhenAll(
                 Choicer.TryUpdate(value),
-                Name.TryUpdate(value.Skill.Name)
+                Name.TryUpdate(value.Skill.Name),
+                Description.TryUpdate(value.Skill.Description)
             );
         }
     }

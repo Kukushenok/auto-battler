@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: WeaponRepository
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.WeaponRepository
   <Values>k__BackingField:
+  - {fileID: 11400000, guid: 3dc789eb1470e154b901a52f87adbbc8, type: 2}
   - {fileID: 11400000, guid: 50d8b487f200697408858df6d89c0074, type: 2}
   - {fileID: 11400000, guid: 75c3be1ce8159a84a850872c7a904cad, type: 2}
   - {fileID: 11400000, guid: c37604402cc494549accff87fecd781e, type: 2}
   - {fileID: 11400000, guid: 40c87ba544d9af14db412462d4f5d6bb, type: 2}
+  - {fileID: 11400000, guid: 1ca3aa619579dd74c8480756b4f95893, type: 2}
   - {fileID: 11400000, guid: caa8beec0dd59c24ea380b4f5be024fd, type: 2}
   - {fileID: 11400000, guid: b4d8e9b9b69291541b0464d279db6ac6, type: 2}
   - {fileID: 11400000, guid: 873cb722497c02f419f88624399af02f, type: 2}

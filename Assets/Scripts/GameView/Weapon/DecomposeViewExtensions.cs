@@ -4,11 +4,11 @@ namespace Game.View
 {
     public static class DecomposeViewExtensions
     {
-        public static UniTask TryHide<T>(this MonoBehaviorSection sx)
+        public static UniTask TryHide(this MonoBehaviorSection sx)
         {
             return sx ? sx.Hide() : UniTask.CompletedTask;
         }
-        public static UniTask TryShow<T>(this MonoBehaviorSection sx)
+        public static UniTask TryShow(this MonoBehaviorSection sx)
         {
             return sx ? sx.Show() : UniTask.CompletedTask;
         }

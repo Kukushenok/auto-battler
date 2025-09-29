@@ -13,6 +13,7 @@ namespace Game.View
         [SerializeField] private ShakeOptions attackSettings;
         [SerializeField] private SerializableMotionSettings<Color, NoOptions> hideSettings;
         [SerializeField] private Transform prefabTransform;
+        [SerializeField] private Vector3 punchDir;
 
         private SpriteRenderer currentPrefabInstance;
         public override async UniTask Die()
@@ -46,9 +47,20 @@ namespace Game.View
 
         protected override async UniTask BasicAttack(AttackType src, float damage)
         {
+            Vector3 dist = new Vector3(0.1f, 0.1f, 0);
             Debug.Log(damage);
-            await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, Vector3.one * 0.2f, 0.5f)
-                 .WithDampingRatio(attackSettings.DampingRatio * Mathf.Clamp(0, 5, 5 - damage)).BindToLocalPosition(currentPrefabInstance.transform);
+            if (damage > 0)
+            {
+                await LMotion.Punch.Create(currentPrefabInstance.transform.localPosition, punchDir, 0.5f)
+                     .WithDampingRatio(attackSettings.DampingRatio * Mathf.Clamp(0, 1, 1 - damage / 10))
+                     .WithFrequency(attackSettings.Frequency).BindToLocalPosition(currentPrefabInstance.transform);
+            } 
+            else
+            {
+                await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, dist, 0.5f)
+                     .WithDampingRatio(attackSettings.DampingRatio)
+                     .WithFrequency(attackSettings.Frequency).BindToLocalPosition(currentPrefabInstance.transform);
+            }
         }
 
         protected override async UniTask OtherAttack(string animID, AttackType src, float damage)

@@ -21,3 +21,7 @@ MonoBehaviour:
     Reward: {fileID: 11400000, guid: 5eb535eabd533d44caf1908bb8c0ccca, type: 2}
   - BattleEntity: {fileID: 11400000, guid: 4d5388543b342fd42b76167037dae791, type: 2}
     Reward: {fileID: 11400000, guid: b4d8e9b9b69291541b0464d279db6ac6, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 7232485b73cbf65428bfd8f6bfd3349d, type: 2}
+    Reward: {fileID: 11400000, guid: f23616be68ec37e499b39f4424e3ffab, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: ba04a35980a3bab48a8fc869c3eb6bdf, type: 2}
+    Reward: {fileID: 11400000, guid: 50d8d11d925d6f649b1e5d38cd64144f, type: 2}

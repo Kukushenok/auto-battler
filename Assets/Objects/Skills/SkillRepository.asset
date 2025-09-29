@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: SkillRepository
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.SkillDescriptorRepository
   <Values>k__BackingField:
+  - {fileID: 11400000, guid: c8ba441128696e94cbeb959f28151be7, type: 2}
+  - {fileID: 11400000, guid: a30e7dac5c670a047b5408079d33cba8, type: 2}
+  - {fileID: 11400000, guid: bf4e486f1a7fc3244924ee0118aa4110, type: 2}
   - {fileID: 11400000, guid: 179e01110d9b82946b11a31d5cfa66ae, type: 2}
   - {fileID: 11400000, guid: 1226e30842635344085071f717a6e08a, type: 2}
   - {fileID: 11400000, guid: 93f2aededdaadf1489a70f25aca15a53, type: 2}
