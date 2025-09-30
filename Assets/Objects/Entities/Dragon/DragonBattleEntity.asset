@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903b48054db1924f9692b60154a5d95, type: 3}
   m_Name: DragonBattleEntity
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.BattleEntitySO
-  Skin: {fileID: 11400000, guid: 86471e9232981514b96239d1dba44ef9, type: 2}
+  Skin: {fileID: 11400000, guid: 6943c138ccbe7d9418b47546f4a2e33f, type: 2}
   Health: 20
   Strength: 3
   Dexterity: 3

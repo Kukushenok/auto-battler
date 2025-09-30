@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9903b48054db1924f9692b60154a5d95, type: 3}
   m_Name: SlimeBattleEntity
   m_EditorClassIdentifier: GameRepositories::Game.Repositories.BattleEntitySO
-  Skin: {fileID: 11400000, guid: 7595d2365f424454192eaff4a33ca32e, type: 2}
+  Skin: {fileID: 11400000, guid: 094341be855eec14e94fbd604ba971e8, type: 2}
   Health: 8
   Strength: 3
   Dexterity: 1
