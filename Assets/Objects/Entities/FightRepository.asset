@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0fa41d532afc742b174a674ae96384, type: 3}
+  m_Name: FightRepository
+  m_EditorClassIdentifier: GameRepositories::Game.Repositories.FightRepository
+  Fights:
+  - BattleEntity: {fileID: 11400000, guid: 96d645b462df73b4493c6f59ccfabaa1, type: 2}
+    Reward: {fileID: 11400000, guid: caa8beec0dd59c24ea380b4f5be024fd, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 2aaa156792921d94caf3a5c557a71163, type: 2}
+    Reward: {fileID: 11400000, guid: 873cb722497c02f419f88624399af02f, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 6aea5b8e67dcb1a4cae2df93df392db7, type: 2}
+    Reward: {fileID: 11400000, guid: 5eb535eabd533d44caf1908bb8c0ccca, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 4d5388543b342fd42b76167037dae791, type: 2}
+    Reward: {fileID: 11400000, guid: b4d8e9b9b69291541b0464d279db6ac6, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: 7232485b73cbf65428bfd8f6bfd3349d, type: 2}
+    Reward: {fileID: 11400000, guid: f23616be68ec37e499b39f4424e3ffab, type: 2}
+  - BattleEntity: {fileID: 11400000, guid: ba04a35980a3bab48a8fc869c3eb6bdf, type: 2}
+    Reward: {fileID: 11400000, guid: 50d8d11d925d6f649b1e5d38cd64144f, type: 2}

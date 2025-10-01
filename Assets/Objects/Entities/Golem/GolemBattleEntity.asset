@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9903b48054db1924f9692b60154a5d95, type: 3}
+  m_Name: GolemBattleEntity
+  m_EditorClassIdentifier: GameRepositories::Game.Repositories.BattleEntitySO
+  Skin: {fileID: 11400000, guid: 86471e9232981514b96239d1dba44ef9, type: 2}
+  Health: 10
+  Strength: 3
+  Dexterity: 1
+  Endurance: 3
+  DefaultWeapon: {fileID: 11400000, guid: c37604402cc494549accff87fecd781e, type: 2}
+  DefaultSkills:
+  - {fileID: 11400000, guid: 1226e30842635344085071f717a6e08a, type: 2}
