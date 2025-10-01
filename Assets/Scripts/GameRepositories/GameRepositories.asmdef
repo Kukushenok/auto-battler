@@ -1,0 +1,16 @@
+{
+    "name": "GameRepositories",
+    "rootNamespace": "Game.Repositories",
+    "references": [
+        "GUID:cafd89cde8cc3c44c81f37cb4317acf9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

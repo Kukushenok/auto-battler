@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d61763ede36e634980000695057d213, type: 3}
+  m_Name: SkinRepository
+  m_EditorClassIdentifier: GameRepositories::Game.Repositories.BattleEntitySkinRepository
+  <Values>k__BackingField:
+  - {fileID: 11400000, guid: 6943c138ccbe7d9418b47546f4a2e33f, type: 2}
+  - {fileID: 11400000, guid: b80ebd4cf5ed2434e9625155fd42044b, type: 2}
+  - {fileID: 11400000, guid: 7595d2365f424454192eaff4a33ca32e, type: 2}
+  - {fileID: 11400000, guid: 86471e9232981514b96239d1dba44ef9, type: 2}
+  - {fileID: 11400000, guid: d1671160e3bb91e4eb74863b688e4e81, type: 2}
+  - {fileID: 11400000, guid: 036d056fdb19d0140964a4798d714e83, type: 2}
+  - {fileID: 11400000, guid: 094341be855eec14e94fbd604ba971e8, type: 2}
