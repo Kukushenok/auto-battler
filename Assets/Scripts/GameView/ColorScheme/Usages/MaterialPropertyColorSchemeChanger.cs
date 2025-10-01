@@ -25,7 +25,7 @@ namespace Game.View.ColorScheme
 
         public void SetColorScheme(ColorScheme scheme, bool firstTime)
         {
-            if(firstTime)
+            if (firstTime)
             {
                 instance.SetColor("NormalColor", scheme.MainColor);
                 instance.SetColor("DerpthsColor", scheme.BackgroundColor);

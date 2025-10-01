@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace AutoBattler.Battle
 {
-    internal class UpdateHealthEvent: IBattleEvent
+    internal class UpdateHealthEvent : IBattleEvent
     {
         private float m_Health;
         private float m_MaxHealth;

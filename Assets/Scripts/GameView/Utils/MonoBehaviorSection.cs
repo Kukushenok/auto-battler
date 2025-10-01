@@ -1,5 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Game.View
@@ -8,7 +7,7 @@ namespace Game.View
     /// Life cycle is supposed to be:
     /// Init -> Hide
     /// </summary>
-    public abstract class MonoBehaviorSection: MonoBehaviour
+    public abstract class MonoBehaviorSection : MonoBehaviour
     {
         public enum State { Initting, Initted, Hiding, Hidden }
         private State state = State.Hidden;

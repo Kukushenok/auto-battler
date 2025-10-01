@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using AutoBattler;
 using Game.Registries;
-using AutoBattler;
+using UnityEngine;
 namespace Game.Repositories
 {
     public abstract class SkillDescriptorSO : IdentifiableScriptableObject, ISkillDescriptor

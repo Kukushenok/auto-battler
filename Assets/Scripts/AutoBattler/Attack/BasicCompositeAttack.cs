@@ -18,7 +18,7 @@ namespace AutoBattler
 
         public async Task Visualize(IAttackPresenter presenter)
         {
-            foreach(var attack in m_Attacks)
+            foreach (var attack in m_Attacks)
             {
                 await attack.Visualize(presenter);
             }

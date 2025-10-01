@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Game.View
 {
-    public abstract class EntityView: MonoBehaviourView<BattleEntitySkinSO>, IAttackPresenter
+    public abstract class EntityView : MonoBehaviourView<BattleEntitySkinSO>, IAttackPresenter
     {
         public Task VisualiseBasicAttack(AttackType src, float damage) => BasicAttack(src, damage).AsTask();
         public Task VisualiseOtherAttack(string animID, AttackType src, float damage) => OtherAttack(animID, src, damage).AsTask();

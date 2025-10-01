@@ -2,7 +2,7 @@
 {
     internal class MissFirstAttackDecorator : AttackDecorator
     {
-        public MissFirstAttackDecorator(IAttackBuilder bldr): base(bldr)
+        public MissFirstAttackDecorator(IAttackBuilder bldr) : base(bldr)
         {
         }
         protected override IAttackBuilder OnAttack(AttackType src, float damage, IAttackBuilder decorated)

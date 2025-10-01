@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.View
 {
-    public class CompositeParallelMonoBehSection: MonoBehaviorSection
+    public class CompositeParallelMonoBehSection : MonoBehaviorSection
     {
         [SerializeField] private MonoBehaviorSection[] allSections;
 

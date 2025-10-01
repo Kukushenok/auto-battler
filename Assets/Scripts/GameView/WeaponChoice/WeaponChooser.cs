@@ -7,7 +7,7 @@ using VContainer;
 
 namespace Game.View
 {
-    public class WeaponChooser: MonoBehaviour
+    public class WeaponChooser : MonoBehaviour
     {
         [SerializeField] private MonoBehaviourView<WeaponChoice> currentWeaponView;
         [SerializeField] private MonoBehaviourView<WeaponChoice> alternativeWeaponView;
@@ -37,6 +37,6 @@ namespace Game.View
 
             await WindowAnimator.Hide();
             return result;
-        } 
+        }
     }
 }

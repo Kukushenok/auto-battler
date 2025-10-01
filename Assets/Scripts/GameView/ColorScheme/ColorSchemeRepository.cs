@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.View.ColorScheme
 {
-    public class ColorSchemeRepository: IColorSchemeRepository
+    public class ColorSchemeRepository : IColorSchemeRepository
     {
         private ColorSchemeSO colorSchemeSO;
         private IRandom rnd;

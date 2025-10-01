@@ -1,12 +1,11 @@
 ﻿using Cysharp.Threading.Tasks;
 using LitMotion;
-using LitMotion.Extensions;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game.View
 {
-    public class ColorTransitionSection: MonoBehaviorSection
+    public class ColorTransitionSection : MonoBehaviorSection
     {
         [SerializeField] private float durationTime;
         private Color transparent = new Color(0, 0, 0, 0);
@@ -20,7 +19,7 @@ namespace Game.View
         }
         protected override async UniTask DoHide()
         {
-            await LMotion.Create(normalColor, transparent, durationTime).WithEase(Ease.InOutCubic).Bind(x=>img.color = x).ToUniTask();
+            await LMotion.Create(normalColor, transparent, durationTime).WithEase(Ease.InOutCubic).Bind(x => img.color = x).ToUniTask();
             gameObject.SetActive(false);
         }
 

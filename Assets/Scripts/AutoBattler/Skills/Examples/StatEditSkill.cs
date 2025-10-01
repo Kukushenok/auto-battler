@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutoBattler.Skills
+﻿namespace AutoBattler.Skills
 {
     /// <summary>
     /// TODO: IT IS NOT A DECORATOR, BUT IT MIGHT BE.
     /// </summary>
-    public class StatEditSkill: IGameSkill
+    public class StatEditSkill : IGameSkill
     {
         private IEntityStats delta;
         public StatEditSkill(IEntityStats delta)

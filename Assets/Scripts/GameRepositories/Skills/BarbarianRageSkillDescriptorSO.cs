@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using AutoBattler;
+﻿using AutoBattler;
 using AutoBattler.Skills;
+using UnityEngine;
 namespace Game.Repositories
 {
     [CreateAssetMenu(fileName = "Barbarian Range Skill", menuName = "Scriptable Objects/Skills/Types/Barbarian Rage Skill")]

@@ -1,6 +1,6 @@
 ﻿namespace AutoBattler.Skills
 {
-    public class ShieldSkill: IGameSkill
+    public class ShieldSkill : IGameSkill
     {
         private class ShieldDecorator : AttackDecorator
         {

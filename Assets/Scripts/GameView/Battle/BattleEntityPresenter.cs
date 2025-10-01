@@ -47,7 +47,7 @@ namespace Game.View
 
         void IBattleEntityPresenter.UseVisualModifier(string modifier)
         {
-            
+
         }
 
         void IBattleEntityPresenter.WithHealth(IHealth health)

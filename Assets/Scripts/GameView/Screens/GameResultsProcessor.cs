@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.View
 {
-    public class MonoBehavourScreen<T>: MonoBehaviourProcess<T>
+    public class MonoBehavourScreen<T> : MonoBehaviourProcess<T>
     {
         [SerializeField] private MonoBehaviorSection section;
         [SerializeField] private MonoBehaviourView<T> resultView;

@@ -1,7 +1,6 @@
 ﻿using AutoBattler.External;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 namespace AutoBattler
 {
@@ -21,7 +20,7 @@ namespace AutoBattler
             Health = HP;
             Skills = skills.ToList();
             Weapon = weapon;
-            foreach(var S in Skills)
+            foreach (var S in Skills)
             {
                 stats = S.ModifySelfStats(stats);
             }
@@ -29,7 +28,7 @@ namespace AutoBattler
         }
         public IAttackBuilder DoAttack(IAttackBuilder builder)
         {
-            foreach(var S in Skills)
+            foreach (var S in Skills)
             {
                 builder = S.ModifyEnemy(builder);
             }
@@ -52,7 +51,7 @@ namespace AutoBattler
         public IAttackBuilder GetAttackBuilder()
         {
             IAttackBuilder atk = new BasicAttackBuilder(Stats);
-            foreach(var S in Skills)
+            foreach (var S in Skills)
             {
                 atk = S.ModifySelf(atk);
             }

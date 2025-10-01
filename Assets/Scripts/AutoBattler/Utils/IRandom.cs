@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutoBattler.Utils
+﻿namespace AutoBattler.Utils
 {
     public interface IRandom
     {
@@ -16,7 +10,7 @@ namespace AutoBattler.Utils
     {
         public T Value(IRandom rnd);
     }
-    public abstract class AbstractRandomCollection<T>: IRandomValue<T>
+    public abstract class AbstractRandomCollection<T> : IRandomValue<T>
     {
         public T[] values;
 
@@ -25,14 +19,14 @@ namespace AutoBattler.Utils
             return values[rnd.GetRange(0, values.Length)];
         }
     }
-    public abstract class AbstractRandomRange<T>: IRandomValue<T>
+    public abstract class AbstractRandomRange<T> : IRandomValue<T>
     {
         public AbstractRandomRange(T min, T max)
         {
             minValue = min;
             maxValue = max;
         }
-        
+
         protected T minValue;
         protected T maxValue;
 

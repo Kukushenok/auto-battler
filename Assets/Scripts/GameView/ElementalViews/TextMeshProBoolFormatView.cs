@@ -1,10 +1,9 @@
 using Cysharp.Threading.Tasks;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Game.View
 {
-    public class BoolToStringFormatterView: MonoBehaviourView<bool>
+    public class BoolToStringFormatterView : MonoBehaviourView<bool>
     {
         [SerializeField] private MonoBehaviourView<string> decorating;
         [SerializeField] private string trueValue;

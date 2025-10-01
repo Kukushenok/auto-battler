@@ -1,15 +1,12 @@
 using AutoBattler.External;
 using AutoBattler.Utils;
-using NUnit.Framework;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using UnityEngine;
 
 namespace AutoBattler
 {
-    public class AutoBattler: IPlayable
+    public class AutoBattler : IPlayable
     {
         public struct Settings
         {
@@ -30,7 +27,7 @@ namespace AutoBattler
             ISkillDescriptor chosenSkill = null;
             var skills = m_Settings.SkillRepository.GetSkills();
             List<ISkillDescriptor> descriptors = new List<ISkillDescriptor>();
-            foreach(var x in skills)
+            foreach (var x in skills)
             {
                 if (!x.IsExausted) descriptors.Add(x.GetCurrentSkill());
             }
@@ -41,7 +38,7 @@ namespace AutoBattler
                 {
                     if (!x.IsExausted)
                     {
-                        if(x.GetCurrentSkill() == chosenSkill)
+                        if (x.GetCurrentSkill() == chosenSkill)
                         {
                             resWeapon = x.GetStartingWeapon();
                             m_Settings.SkillRepository.Choose(x);
@@ -103,7 +100,7 @@ namespace AutoBattler
                 var enemy = chosenFight.GetOpposingEntity().Build();
                 var section = new BattleArenaSection(m_Settings.Random, m_Settings.Controller.Battle(), player, enemy);
                 await section.Play();
-                if(player.Health.IsDead)
+                if (player.Health.IsDead)
                 {
                     await m_Settings.Controller.ShowGameOver(false);
                     return;

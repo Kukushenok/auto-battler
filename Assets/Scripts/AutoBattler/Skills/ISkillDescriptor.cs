@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using static UnityEditor.ObjectChangeEventStream;
-
-namespace AutoBattler
+﻿namespace AutoBattler
 {
     public interface ISkillDescriptor
     {

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace AutoBattler.Battle
 {
-    internal class AttackEvent: IBattleEvent
+    internal class AttackEvent : IBattleEvent
     {
         private IAttack m_Attack;
         private bool m_isPlayer;
