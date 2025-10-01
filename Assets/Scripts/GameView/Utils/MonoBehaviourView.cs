@@ -30,7 +30,6 @@ namespace Game.View
             await DoHide();
             state = State.Hidden;
         }
-        protected void SetHidden() => state = State.Hidden;
 
         public async UniTask Process(X value)
         {

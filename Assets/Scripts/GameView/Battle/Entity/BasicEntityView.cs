@@ -14,31 +14,33 @@ namespace Game.View
         [SerializeField] private SerializableMotionSettings<Color, NoOptions> hideSettings;
         [SerializeField] private Transform prefabTransform;
         [SerializeField] private Vector3 punchDir;
+        [SerializeField] private MonoBehaviourView<string> nameView;
 
         private SpriteRenderer currentPrefabInstance;
         public override async UniTask Die()
         {
-            if (currentPrefabInstance != null)
-                await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
-            Destroy(currentPrefabInstance.gameObject);
-            currentPrefabInstance = null;
-            SetHidden();
+            await DoHide();
         }
 
         protected override async UniTask DoHide()
         {
             if (currentPrefabInstance != null)
-                await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
-            Destroy(currentPrefabInstance.gameObject);
+            {
+                await UniTask.WhenAll(LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask(), nameView.TryHide());
+                Destroy(currentPrefabInstance.gameObject);
+            }
             currentPrefabInstance = null;
-
+            
         }
 
         protected override async UniTask DoInit(BattleEntitySkinSO value)
         {
             currentPrefabInstance = Instantiate(value.Skin, prefabTransform).GetComponent<SpriteRenderer>();
             currentPrefabInstance.color = inSettings.StartValue;
-            await LMotion.Create(inSettings).BindToColor(currentPrefabInstance).ToUniTask();
+            await UniTask.WhenAll(
+                nameView.TryInit(value.Name), 
+                LMotion.Create(inSettings).BindToColor(currentPrefabInstance).ToUniTask()
+                );
         }
 
         protected override UniTask DoUpdate(BattleEntitySkinSO value)
