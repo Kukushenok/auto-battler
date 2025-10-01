@@ -27,7 +27,7 @@ namespace Game.View
 
         protected override async UniTask DoHide()
         {
-            if(currentPrefabInstance != null)
+            if (currentPrefabInstance != null)
                 await LMotion.Create(hideSettings).BindToColor(currentPrefabInstance).ToUniTask();
             Destroy(currentPrefabInstance.gameObject);
             currentPrefabInstance = null;
@@ -55,7 +55,7 @@ namespace Game.View
                 await LMotion.Punch.Create(currentPrefabInstance.transform.localPosition, punchDir, 0.5f)
                      .WithDampingRatio(attackSettings.DampingRatio * Mathf.Clamp(0, 1, 1 - damage / 10))
                      .WithFrequency(attackSettings.Frequency).BindToLocalPosition(currentPrefabInstance.transform);
-            } 
+            }
             else
             {
                 await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, dist, 0.5f)

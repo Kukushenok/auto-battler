@@ -1,6 +1,6 @@
 ﻿namespace AutoBattler.Skills
 {
-    public class StoneSkinSkill: IGameSkill
+    public class StoneSkinSkill : IGameSkill
     {
         public IAttackBuilder ModifySelf(IAttackBuilder bldr)
         {

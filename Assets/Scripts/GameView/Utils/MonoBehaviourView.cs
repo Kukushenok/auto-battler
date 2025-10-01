@@ -1,14 +1,12 @@
 ﻿using Cysharp.Threading.Tasks;
-using System.Threading.Tasks;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 
 namespace Game.View
 {
 
-    public abstract class MonoBehaviourView<X>: MonoBehaviour, IView<X>, IViewProcess<X>
+    public abstract class MonoBehaviourView<X> : MonoBehaviour, IView<X>, IViewProcess<X>
     {
-        public enum State { Initting, Initted, Hiding, Hidden}
+        public enum State { Initting, Initted, Hiding, Hidden }
         private State state = State.Hidden;
         public async UniTask InitValueAsync(X value)
         {

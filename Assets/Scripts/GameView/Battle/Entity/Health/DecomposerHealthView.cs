@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.View
 {
-    public class DecomposerHealthView: MonoBehaviourView<HealthStats>
+    public class DecomposerHealthView : MonoBehaviourView<HealthStats>
     {
         [SerializeField] private MonoBehaviourView<float> health;
         [SerializeField] private MonoBehaviourView<float> maxHealth;
@@ -19,14 +19,14 @@ namespace Game.View
         protected override async UniTask DoInit(HealthStats value)
         {
             await UniTask.WhenAll(
-                health.TryInit(value.HP), 
+                health.TryInit(value.HP),
                 maxHealth.TryInit(value.MaxHP)
             );
         }
         protected override async UniTask DoUpdate(HealthStats value)
         {
             await UniTask.WhenAll(
-                health.TryUpdate(value.HP), 
+                health.TryUpdate(value.HP),
                 maxHealth.TryUpdate(value.MaxHP)
             );
         }

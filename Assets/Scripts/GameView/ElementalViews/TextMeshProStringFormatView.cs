@@ -1,4 +1,4 @@
 namespace Game.View
 {
-    public class TextMeshProStringFormatView: TextMeshProFormatView<string> { }
+    public class TextMeshProStringFormatView : TextMeshProFormatView<string> { }
 }

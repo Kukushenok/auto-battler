@@ -14,7 +14,7 @@ namespace AutoBattler
         public IEnumerable<IBattleEvent> DoBattle(IBattleEntity entityA, IBattleEntity entityB)
         {
             bool isPlayer = true;
-            if(entityA.Stats.Dexterity < entityB.Stats.Dexterity)
+            if (entityA.Stats.Dexterity < entityB.Stats.Dexterity)
             {
                 (entityA, entityB) = (entityB, entityA);
                 isPlayer = !isPlayer;

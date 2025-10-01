@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutoBattler.Assets.Scripts.AutoBattler.Skills.Examples
+﻿namespace AutoBattler.Assets.Scripts.AutoBattler.Skills.Examples
 {
-    public class DamageTypeModifierSkill: IGameSkill
+    public class DamageTypeModifierSkill : IGameSkill
     {
         private class DamageTypeModifierDecorator : AttackDecorator
         {
@@ -35,7 +29,7 @@ namespace AutoBattler.Assets.Scripts.AutoBattler.Skills.Examples
         }
         public IAttackBuilder ModifySelf(IAttackBuilder bldr) => new DamageTypeModifierDecorator(bldr, type, multiplier);
     }
-    public class PeriodicDamageSkill: IGameSkill
+    public class PeriodicDamageSkill : IGameSkill
     {
         private int frequency;
         private float bonusDamage;

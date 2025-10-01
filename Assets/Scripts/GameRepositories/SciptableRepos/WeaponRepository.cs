@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using Game.Registries;
+﻿using Game.Registries;
+using UnityEngine;
 namespace Game.Repositories
 {
     [CreateAssetMenu(fileName = "Weapon Repository", menuName = "Scriptable Objects/Weapon/Repository")]

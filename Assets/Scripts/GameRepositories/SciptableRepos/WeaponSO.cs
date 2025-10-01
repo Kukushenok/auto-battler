@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using AutoBattler;
 using Game.Registries;
-using AutoBattler;
+using UnityEngine;
 namespace Game.Repositories
 {
     [CreateAssetMenu(fileName = "Weapon", menuName = "Scriptable Objects/Weapon/Object")]

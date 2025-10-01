@@ -35,7 +35,7 @@ namespace Game.View
 
         public async Task Run(IEnumerable<IBattleEvent> events)
         {
-            foreach(var x in events)
+            foreach (var x in events)
             {
                 await x.Visualize(this);
             }
@@ -43,7 +43,7 @@ namespace Game.View
 
         public async Task UpdateHealth(float healthNow, bool isPlayer)
         {
-            await (isPlayer ? player: enemy).UpdateHealth(healthNow);
+            await (isPlayer ? player : enemy).UpdateHealth(healthNow);
         }
     }
 }

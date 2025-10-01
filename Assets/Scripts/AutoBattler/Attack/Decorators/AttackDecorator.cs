@@ -1,6 +1,6 @@
 ﻿namespace AutoBattler
 {
-    public class AttackDecorator: IAttackBuilder
+    public class AttackDecorator : IAttackBuilder
     {
         private IAttackBuilder decorating;
         public AttackDecorator(IAttackBuilder decorating)

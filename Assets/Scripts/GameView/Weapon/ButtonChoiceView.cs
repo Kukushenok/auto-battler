@@ -17,7 +17,7 @@ namespace Game.View
         }
         private void OnDestroy()
         {
-            if(btn != null) btn.onClick.RemoveListener(OnButtonDown);
+            if (btn != null) btn.onClick.RemoveListener(OnButtonDown);
         }
         protected override UniTask DoHide()
         {

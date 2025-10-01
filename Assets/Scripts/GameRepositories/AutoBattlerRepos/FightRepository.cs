@@ -10,7 +10,7 @@ namespace Game.Repositories
     public class FightRepository : ScriptableObject
     {
         [Serializable]
-        private struct Fight: IFightDescriptor
+        private struct Fight : IFightDescriptor
         {
             public BattleEntitySO BattleEntity;
             public WeaponSO Reward;
@@ -28,7 +28,7 @@ namespace Game.Repositories
         [SerializeField] private Fight[] Fights;
         public IEnumerable<IFightDescriptor> GetFightDescriptors()
         {
-            foreach(var F in Fights)
+            foreach (var F in Fights)
             {
                 yield return F;
             }

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace AutoBattler
 {
-    internal class BattleArenaSection: IPlayable
+    internal class BattleArenaSection : IPlayable
     {
         private IBattleEntity entityPlayer;
         private IBattleEntity entityEnemy;

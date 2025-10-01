@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using AutoBattler;
+﻿using AutoBattler;
 using AutoBattler.Assets.Scripts.AutoBattler.Skills.Examples;
+using UnityEngine;
 namespace Game.Repositories
 {
     [CreateAssetMenu(fileName = "Periodic Damage Skill", menuName = "Scriptable Objects/Skills/Types/Periodic Damage Skill")]

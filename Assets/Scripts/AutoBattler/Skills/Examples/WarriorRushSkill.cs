@@ -1,6 +1,6 @@
 ﻿namespace AutoBattler.Skills
 {
-    public class WarriorRushSkill: IGameSkill
+    public class WarriorRushSkill : IGameSkill
     {
         private class DoubledownDecorator : AttackDecorator
         {
@@ -21,7 +21,7 @@
         public bool enabled = true;
         public IAttackBuilder ModifyEnemy(IAttackBuilder bldr)
         {
-            if(enabled)
+            if (enabled)
             {
                 enabled = false;
                 return new DoubledownDecorator(bldr);

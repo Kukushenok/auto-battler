@@ -2,13 +2,10 @@
 using AutoBattler.External;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game.Repositories
 {
-    public class SkillLine: ISkillTree
+    public class SkillLine : ISkillTree
     {
         private Queue<SkillDescriptorSO> line;
         private IWeapon startingWeapon;
@@ -22,7 +19,7 @@ namespace Game.Repositories
 
         public ISkillDescriptor GetCurrentSkill()
         {
-            if(line.TryPeek(out var result)) return result;
+            if (line.TryPeek(out var result)) return result;
             return null;
         }
 
@@ -52,9 +49,9 @@ namespace Game.Repositories
 
         public void Choose(ISkillTree descriptor)
         {
-            foreach(var Q in skillLines)
+            foreach (var Q in skillLines)
             {
-                if(Q == descriptor)
+                if (Q == descriptor)
                 {
                     Q.AddLevel();
                     limitLevel--;

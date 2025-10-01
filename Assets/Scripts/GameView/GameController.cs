@@ -2,7 +2,6 @@ using AutoBattler;
 using AutoBattler.External;
 using Cysharp.Threading.Tasks;
 using Game.View.ColorScheme;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -10,7 +9,7 @@ using VContainer;
 
 namespace Game.View
 {
-    public class GameController: MonoBehaviour, IGameController
+    public class GameController : MonoBehaviour, IGameController
     {
         [SerializeField] private BaseBattlePresenter presenter;
         [SerializeField] private SkillChooser skillChooser;

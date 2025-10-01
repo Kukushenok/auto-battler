@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using AutoBattler;
+﻿using AutoBattler;
 using AutoBattler.Skills;
+using UnityEngine;
 namespace Game.Repositories
 {
     [CreateAssetMenu(fileName = "Poison Skill", menuName = "Scriptable Objects/Skills/Types/Poison Skill")]

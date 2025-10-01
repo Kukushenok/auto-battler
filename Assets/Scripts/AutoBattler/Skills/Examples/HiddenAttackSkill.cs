@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AutoBattler.Skills
+﻿namespace AutoBattler.Skills
 {
-    public class HiddenAttackSkill: IGameSkill
+    public class HiddenAttackSkill : IGameSkill
     {
-        class HiddenAttackDecorator: AttackDecorator
+        class HiddenAttackDecorator : AttackDecorator
         {
             private float damageBonus;
-            public HiddenAttackDecorator(IAttackBuilder decorating, float damageBonus): base(decorating)
+            public HiddenAttackDecorator(IAttackBuilder decorating, float damageBonus) : base(decorating)
             {
                 this.damageBonus = damageBonus;
             }
@@ -19,7 +13,7 @@ namespace AutoBattler.Skills
 
             protected override IAttack OnBuild(IAttackBuilder decorating)
             {
-                if(triggers)
+                if (triggers)
                 {
                     decorating = decorating.WithAttack(AttackType.Ability, damageBonus);
                 }
@@ -28,7 +22,7 @@ namespace AutoBattler.Skills
 
             protected override IAttackBuilder OnAttackerStats(IEntityStats stats, IAttackBuilder decorating)
             {
-                if(OpposingStats.Dexterity < stats.Dexterity)
+                if (OpposingStats.Dexterity < stats.Dexterity)
                 {
                     triggers = true;
                 }

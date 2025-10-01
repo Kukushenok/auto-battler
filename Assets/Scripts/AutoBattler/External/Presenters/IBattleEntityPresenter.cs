@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AutoBattler.External
+﻿namespace AutoBattler.External
 {
     public interface IBattleEntityPresenter
     {

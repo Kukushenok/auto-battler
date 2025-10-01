@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Game.View.ColorScheme
 {
-    public class ColorSchemeManager: IColorSchemeManager
+    public class ColorSchemeManager : IColorSchemeManager
     {
         private class ColorSchemeSubscription : IDisposable, IColorSchemeSubscriber
         {

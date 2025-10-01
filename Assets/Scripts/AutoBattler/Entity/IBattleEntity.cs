@@ -2,7 +2,7 @@
 
 namespace AutoBattler
 {
-    public interface IBattleEntity: IAttacker, IAttackable
+    public interface IBattleEntity : IAttacker, IAttackable
     {
         public IEntityStats Stats { get; }
         public IWeapon Weapon { get; }

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace AutoBattler
+﻿namespace AutoBattler
 {
     public interface IBattleEntityBuilder
     {

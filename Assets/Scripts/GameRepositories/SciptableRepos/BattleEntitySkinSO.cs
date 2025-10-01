@@ -1,9 +1,9 @@
-﻿using UnityEngine;
-using Game.Registries;
+﻿using Game.Registries;
+using UnityEngine;
 namespace Game.Repositories
 {
     [CreateAssetMenu(fileName = "Entity Skin", menuName = "Scriptable Objects/Entity/Skin")]
-    public class BattleEntitySkinSO: IdentifiableScriptableObject
+    public class BattleEntitySkinSO : IdentifiableScriptableObject
     {
         [field: SerializeField] public GameObject Skin { get; private set; }
         [field: SerializeField] public string Name { get; private set; }

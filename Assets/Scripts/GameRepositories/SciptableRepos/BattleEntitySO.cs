@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Game.Repositories
 {
-    public interface IBattleEntityGetter 
+    public interface IBattleEntityGetter
     {
         public IBattleEntityBuilder Get();
     }
     [CreateAssetMenu(fileName = "Entity Object", menuName = "Scriptable Objects/Entity/Object")]
-    public class BattleEntitySO: ScriptableObject, IBattleEntityGetter
+    public class BattleEntitySO : ScriptableObject, IBattleEntityGetter
     {
         [SerializeField] private BattleEntitySkinSO Skin; // in future it is better to be just Skin ID
         [SerializeField] private float Health;
@@ -24,7 +24,7 @@ namespace Game.Repositories
             builder.OverrideHealth(new Health(Health));
             builder.OverrideStats(new EntityStats(Strength, Dexterity, Endurance));
             DefaultSkills.ForEach(S => builder.AddSkill(S.CreateSkill()));
-            if(DefaultWeapon != null) builder.OverrideWeapon(DefaultWeapon);
+            if (DefaultWeapon != null) builder.OverrideWeapon(DefaultWeapon);
             return builder;
         }
     }

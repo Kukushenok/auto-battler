@@ -2,7 +2,7 @@
 
 namespace AutoBattler
 {
-    public class BasicAttack: IAttack
+    public class BasicAttack : IAttack
     {
         private AttackType m_Source;
 
