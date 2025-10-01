@@ -69,7 +69,7 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     needs: unity_build
-    if: needs.unity_build.outputs.buildArtifact contains 'WebGL'
+    if: contains(needs.unity_build.outputs.buildArtifact, 'WebGL')
     
     steps:
       - name: Download WebGL build artifact
