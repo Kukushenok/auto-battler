@@ -15,6 +15,8 @@ namespace Game.View
         [SerializeField] private Transform prefabTransform;
         [SerializeField] private Vector3 punchDir;
         [SerializeField] private MonoBehaviourView<string> nameView;
+        [SerializeField] private MonoBehaviourProcess<BasicAttack> basicAttackProcess;
+        [SerializeField] private float attackDuration = 0.5f;
 
         private SpriteRenderer currentPrefabInstance;
         public override async UniTask Die()
@@ -52,18 +54,20 @@ namespace Game.View
         {
             Vector3 dist = new Vector3(0.1f, 0.1f, 0);
             Debug.Log(damage);
+            UniTask task;
             if (damage > 0)
             {
-                await LMotion.Punch.Create(currentPrefabInstance.transform.localPosition, punchDir, 0.5f)
+                task = LMotion.Punch.Create(currentPrefabInstance.transform.localPosition, punchDir, attackDuration)
                      .WithDampingRatio(attackSettings.DampingRatio * Mathf.Clamp(0, 1, 1 - damage / 10))
-                     .WithFrequency(attackSettings.Frequency).BindToLocalPosition(currentPrefabInstance.transform);
+                     .WithFrequency(attackSettings.Frequency).BindToLocalPosition(currentPrefabInstance.transform).ToUniTask();
             }
             else
             {
-                await LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, dist, 0.5f)
+                task = LMotion.Shake.Create(currentPrefabInstance.transform.localPosition, dist, attackDuration)
                      .WithDampingRatio(attackSettings.DampingRatio)
-                     .WithFrequency(attackSettings.Frequency).BindToLocalPosition(currentPrefabInstance.transform);
+                     .WithFrequency(attackSettings.Frequency).BindToLocalPosition(currentPrefabInstance.transform).ToUniTask();
             }
+            await UniTask.WhenAll(task, basicAttackProcess.Process(new BasicAttack(src, damage)));
         }
 
         protected override async UniTask OtherAttack(string animID, AttackType src, float damage)

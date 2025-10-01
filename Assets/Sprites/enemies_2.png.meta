@@ -135,7 +135,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemies_2_0
+      name: enemy_skeleton
       rect:
         serializedVersion: 2
         x: 8
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_2_2
+      name: enemy_ghost
       rect:
         serializedVersion: 2
         x: 143
@@ -179,7 +179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_2_3
+      name: enemy_golem
       rect:
         serializedVersion: 2
         x: 227
@@ -214,10 +214,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemies_2_0: -6093498131103408143
       enemies_2_1: 6456959567285500905
-      enemies_2_2: -4349602977071498420
-      enemies_2_3: -3978698604660220327
+      enemy_ghost: -4349602977071498420
+      enemy_golem: -3978698604660220327
+      enemy_skeleton: -6093498131103408143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
