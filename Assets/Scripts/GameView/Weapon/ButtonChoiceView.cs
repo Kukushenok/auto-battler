@@ -21,6 +21,7 @@ namespace Game.View
         }
         protected override UniTask DoHide()
         {
+            currentChoice = null;
             return section.TryHide();
         }
 
