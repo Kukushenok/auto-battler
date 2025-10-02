@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 129418171}
   - component: {fileID: 129418170}
   - component: {fileID: 129418169}
+  - component: {fileID: 129418173}
   m_Layer: 5
   m_Name: AttackProcessor
   m_TagString: Untagged
@@ -317,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.DecomposedAttackDisplay
   attackType: {fileID: 129418170}
   attackDamageView: {fileID: 1572527330}
+  attackDisplayAudioPlayer: {fileID: 129418173}
 --- !u!114 &129418170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +375,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129418167}
   m_CullTransparentMesh: 1
+--- !u!114 &129418173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129418167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cdee4683e7a8a46acb6752700ec3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.AttackDisplayAudioPlayer
+  normalAttack: {fileID: 11400000, guid: 9ddb52d5ca8320e4a8a729de3ab63b97, type: 2}
+  failureAttack: {fileID: 11400000, guid: 8c1ac9b20d75fed409d426194f927910, type: 2}
 --- !u!1 &149841434
 GameObject:
   m_ObjectHideFlags: 0
@@ -8713,6 +8729,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018083511}
   m_CullTransparentMesh: 1
+--- !u!1 &1018242859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018242861}
+  - component: {fileID: 1018242860}
+  m_Layer: 0
+  m_Name: MenuSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1018242860
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018242859}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 0e1bf8a4e46251840908980ee1738536, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.05
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1018242861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018242859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3.676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025302896
 GameObject:
   m_ObjectHideFlags: 0
@@ -8824,6 +8969,7 @@ GameObject:
   - component: {fileID: 1080746555}
   - component: {fileID: 1080746554}
   - component: {fileID: 1080746553}
+  - component: {fileID: 1080746557}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -8927,9 +9073,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.09621451
-    width: 0.5678793
-    height: 0.5652997
+    y: 0.06712329
+    width: 1
+    height: 0.86454797
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -8965,6 +9111,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1080746557
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080746552}
+  m_Enabled: 1
 --- !u!1 &1107943623
 GameObject:
   m_ObjectHideFlags: 0
@@ -10163,6 +10317,7 @@ GameObject:
   - component: {fileID: 1289527607}
   - component: {fileID: 1289527606}
   - component: {fileID: 1289527609}
+  - component: {fileID: 1289527610}
   m_Layer: 5
   m_Name: AttackProcessor
   m_TagString: Untagged
@@ -10260,6 +10415,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.DecomposedAttackDisplay
   attackType: {fileID: 1289527606}
   attackDamageView: {fileID: 1345782857}
+  attackDisplayAudioPlayer: {fileID: 1289527610}
+--- !u!114 &1289527610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289527604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cdee4683e7a8a46acb6752700ec3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.AttackDisplayAudioPlayer
+  normalAttack: {fileID: 11400000, guid: 9ddb52d5ca8320e4a8a729de3ab63b97, type: 2}
+  failureAttack: {fileID: 11400000, guid: 8c1ac9b20d75fed409d426194f927910, type: 2}
 --- !u!1 &1296484257
 GameObject:
   m_ObjectHideFlags: 0
@@ -31518,6 +31688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794613583}
   - component: {fileID: 1794613584}
+  - component: {fileID: 1794613585}
   m_Layer: 5
   m_Name: DexterityCheck
   m_TagString: Untagged
@@ -31559,6 +31730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProDexterityCheck
   text: {fileID: 2124770553}
+  audioManager: {fileID: 1794613585}
   successColor: {r: 1, g: 1, b: 1, a: 1}
   failureColor: {r: 0.5597484, g: 0.5597484, b: 0.5597484, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
@@ -31567,6 +31739,21 @@ MonoBehaviour:
   fadeInOutSpeed: 0.5
   positionDiffer: {x: 0, y: 5, z: 0}
   finalRoundSpeed: 1
+--- !u!114 &1794613585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794613582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c77cb220b099e4dbcb62c1ac17264f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.DexterityCheckAudioManager
+  roundSound: {fileID: 11400000, guid: 9b0f8f8b2df193947a1b35455ac16391, type: 2}
+  successSound: {fileID: 11400000, guid: 72dab1d09779d254489e2498c9bb2dd1, type: 2}
+  failSound: {fileID: 11400000, guid: 58e52210f3ffb7647b162b0b8034c198, type: 2}
 --- !u!1 &1811678517
 GameObject:
   m_ObjectHideFlags: 0
@@ -33197,3 +33384,4 @@ SceneRoots:
   - {fileID: 681539021}
   - {fileID: 1357223312}
   - {fileID: 600906731}
+  - {fileID: 1018242861}

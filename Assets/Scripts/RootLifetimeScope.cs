@@ -2,6 +2,7 @@ using AutoBattler.External;
 using AutoBattler.Utils;
 using Game.Registries;
 using Game.Repositories;
+using Game.View.Audio;
 using Game.View.ColorScheme;
 using UnityEngine;
 using VContainer;
@@ -25,5 +26,6 @@ public class RootLifetimeScope : LifetimeScope
         builder.RegisterFactory<ISkillRepository>(skillChooseRepository.CreateRepo);
         builder.Register<IColorSchemeRepository>((rsv) => new ColorSchemeRepository(rsv.Resolve<IRandom>(), colorSchemeSO), Lifetime.Singleton);
         builder.Register<IColorSchemeManager, ColorSchemeManager>(Lifetime.Singleton);
+        builder.RegisterEntryPoint<AudioSourceAudioManager>(Lifetime.Singleton);
     }
 }

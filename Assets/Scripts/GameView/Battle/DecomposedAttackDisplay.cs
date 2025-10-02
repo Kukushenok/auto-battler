@@ -20,6 +20,7 @@ namespace Game.View
     {
         [SerializeField] private MonoBehaviourView<AttackType> attackType;
         [SerializeField] private MonoBehaviourView<float> attackDamageView;
+        [SerializeField] private AttackDisplayAudioPlayer attackDisplayAudioPlayer;
 
         protected override async UniTask DoHide()
         {
@@ -28,6 +29,7 @@ namespace Game.View
 
         protected override async UniTask DoInit(BasicAttack value)
         {
+            attackDisplayAudioPlayer.OnAttack(value.Damage);
             await UniTask.WhenAll(attackType.TryInit(value.Type), attackDamageView.TryInit(value.Damage));
         }
 

@@ -11,6 +11,7 @@ namespace Game.View
     {
 
         [SerializeField] private TextMeshProUGUI text;
+        [SerializeField] private DexterityCheckAudioManager audioManager;
         [SerializeField] private Color successColor;
         [SerializeField] private Color failureColor;
         [SerializeField] private Color transparent = new Color(0, 0, 0, 0);
@@ -47,15 +48,18 @@ namespace Game.View
             for (int i = 0; i < rounds; i++)
             {
                 text.text = ((i % value.Got) + 1).ToString();
+                audioManager.OnRound();
                 await LMotion.Punch.Create(text.transform.localScale, Vector3.one * 0.2f, roundSpeed).BindToLocalScale(text.transform).ToUniTask();
             }
             text.text = value.Got.ToString();
             if(!value.IsSuccessful)
             {
+                audioManager.OnFail();
                 await LMotion.Shake.Create(text.transform.localPosition, positionDiffer, finalRoundSpeed).BindToLocalPosition(text.transform).ToUniTask();
             }
             else
             {
+                audioManager.OnSuccess();
                 await UniTask.WhenAll(
                      LMotion.Create(text.color, successColor, fadeInOutSpeed).BindToColor(text).ToUniTask(),
                      LMotion.Punch.Create(text.transform.localPosition, positionDiffer, finalRoundSpeed).BindToLocalPosition(text.transform).ToUniTask()

@@ -53,7 +53,7 @@ namespace Game.View
         protected override async UniTask BasicAttack(AttackType src, float damage)
         {
             Vector3 dist = new Vector3(0.1f, 0.1f, 0);
-            Debug.Log(damage);
+            //Debug.Log(damage);
             UniTask task;
             if (damage > 0)
             {
