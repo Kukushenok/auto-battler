@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ru-ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -45,9 +45,19 @@
     </div>
     
     <p>
-    Нашему герою хочется просто очистить свои мысли, но это не даётся так просто.
+    Неудачные обстоятельства в некоторые дни преодолеть невозможно, но нужно стараться.
+    <br />
+    Порой, можно загнать себя в тупик, пытаясь решить проблему одним и тем же способом.
+    <br />
+    Но всё же, нашему герою хочется просто очистить свои мысли, и если он будет не переставать бороться,
+    <br />
+    у него всё получится.
+    <br />
     </p>
-    <a href="https://lestagamesacademy.ru/uploads/pages_media/0_programming(test).pdf">Техническое задание</a>
+    <br />
+    Создано в рамках выполнения тестового задания
+    <br />
+    <a href="TemplateData/THE_TASK.pdf">Техническое задание</a>
     <p>
     Umspannwerk by cryptic scenery is licensed under a Attribution-NonCommercial-ShareAlike 4.0 International License.
     </p>
@@ -74,8 +84,6 @@
           }
         }
       }
-      
-      // Обновляем текст кнопки при изменении полноэкранного режима
       document.addEventListener('fullscreenchange', updateFullscreenButton);
       document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
       document.addEventListener('msfullscreenchange', updateFullscreenButton);
@@ -83,18 +91,13 @@
       function updateFullscreenButton() {
         const btn = document.getElementById('fullscreen-btn');
         if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
-          btn.textContent = 'Выйти из полноэкранного';
+          btn.textContent = 'Выйти';
         } else {
           btn.textContent = 'Полный экран';
         }
       }
-      
-      // Инициализация кнопки
       document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
-
-      // Мобильная адаптация
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
@@ -107,7 +110,6 @@
         canvas.style.top = "0";
         canvas.style.left = "0";
 
-        // Скрываем кнопку на мобильных устройствах (обычно там своя реализация полноэкранного режима)
         document.getElementById('fullscreen-btn').style.display = "none";
 
         document.body.style.textAlign = "left";
@@ -117,7 +119,7 @@
         arguments: [],
         dataUrl: "Build/{{{ DATA_FILENAME }}}",
         frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
-        codeUrl: "Build/L{{{ CODE_FILENAME }}}",
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
         streamingAssetsUrl: "StreamingAssets",
         companyName: {{{ JSON.stringify(COMPANY_NAME) }}},
         productName: {{{ JSON.stringify(PRODUCT_NAME) }}},
@@ -125,7 +127,6 @@
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then((unityInstance) => {
-        // Можно добавить взаимодействие с Unity instance при необходимости
       }).catch((message) => {
         alert(message);
       });
