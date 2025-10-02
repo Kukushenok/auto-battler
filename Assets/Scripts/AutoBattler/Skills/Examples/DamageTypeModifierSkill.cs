@@ -11,13 +11,15 @@
                 this.type = type;
                 this.multiplier = multiplier;
             }
-            protected override IAttackBuilder OnAttack(AttackType src, float damage, IAttackBuilder decorated)
+            protected override IAttackBuilder OnAttack(AttackAttributes attrs, IAttackBuilder decorated)
             {
-                if (src == type)
+                decorated = base.OnAttack(attrs, decorated);
+                if (attrs.Type == type)
                 {
-                    damage *= multiplier;
+                    attrs = attrs.WithTypeAndDamage(AttackType.Ability, attrs.Damage * (multiplier - 1));
+                    decorated = decorated.WithAttack(attrs);
                 }
-                return base.OnAttack(src, damage, decorated);
+                return decorated;
             }
         }
         private AttackType type;
@@ -44,7 +46,7 @@
             roundCounter++;
             if (roundCounter == frequency)
             {
-                bldr = bldr.WithAttack(AttackType.Ability, bonusDamage);
+                bldr = bldr.WithAttack(new AttackAttributes(AttackType.Ability, bonusDamage));
                 roundCounter = 0;
             }
             return bldr;

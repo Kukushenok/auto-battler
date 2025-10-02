@@ -16,7 +16,7 @@
                 if (triggers)
                 {
                     // The Builder is responsible to set Damage to zero if the total damage is negative.
-                    decorating = decorating.WithAttack(AttackType.Ability, -savingHP);
+                    decorating = decorating.WithAttack(AttackAttributes.SkillDamage(-savingHP));
                 }
                 return base.OnBuild(decorating);
             }

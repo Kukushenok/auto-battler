@@ -11,9 +11,9 @@ namespace AutoBattler
         }
         public IEntityStats OpposingStats { get; private set; }
 
-        public IAttackBuilder WithAttack(AttackType src, float damage)
+        public IAttackBuilder WithAttack(AttackAttributes attrs)
         {
-            attacks.Add(new BasicAttack(src, damage));
+            attacks.Add(attrs);
             return this;
         }
 

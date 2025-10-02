@@ -35,11 +35,11 @@ namespace AutoBattler
             builder = builder.WithAttackerStats(Stats);
             if (Weapon != null)
             {
-                builder = builder.WithAttack(Weapon.Source, Weapon.Damage + Stats.Strength);
+                builder = builder.WithAttack(new AttackAttributes(Weapon.Source, Weapon.Damage + Stats.Strength, true));
             }
             else
             {
-                builder = builder.WithAttack(AttackType.Ability, Stats.Strength);
+                builder = builder.WithAttack(new AttackAttributes(AttackType.Ability, Stats.Strength, true));
             }
             foreach (var S in Skills)
             {

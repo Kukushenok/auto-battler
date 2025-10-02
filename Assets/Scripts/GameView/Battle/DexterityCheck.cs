@@ -11,5 +11,6 @@
             Wanted = wanted;
             IsPlayer = isPlayer;
         }
+        public bool IsSuccessful => Got > Wanted;
     }
 }

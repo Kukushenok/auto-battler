@@ -13,7 +13,7 @@
         }
         public IAttackBuilder AttackEnemy(IAttackBuilder bldr)
         {
-            bldr = bldr.WithAttack(AttackType.Ability, rounds > 0 ? attackBonus : attackDebuff);
+            bldr = bldr.WithAttack(new AttackAttributes(AttackType.Ability, rounds > 0 ? attackBonus : attackDebuff));
             if (rounds > 0) rounds--;
             return bldr;
         }

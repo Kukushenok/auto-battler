@@ -156,7 +156,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: weapons_0
+      name: weapon_piercing
       rect:
         serializedVersion: 2
         x: 0
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: weapons_2
+      name: weapons_crushing
       rect:
         serializedVersion: 2
         x: 96
@@ -200,7 +200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: weapons_3
+      name: weapons_chopping
       rect:
         serializedVersion: 2
         x: 192
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: weapons_8
+      name: piercing_type
       rect:
         serializedVersion: 2
         x: 0
@@ -310,7 +310,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: weapons_9
+      name: crushing_type
       rect:
         serializedVersion: 2
         x: 64
@@ -332,7 +332,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: weapons_10
+      name: chopping_type
       rect:
         serializedVersion: 2
         x: 128
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: weapons_11
+      name: ability_type
       rect:
         serializedVersion: 2
         x: 192
@@ -362,7 +362,7 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -389,17 +389,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      weapons_0: 1098179606456428539
-      weapons_10: -4855083040135353222
-      weapons_11: -5557420877203330147
-      weapons_2: -7888296697152109952
-      weapons_3: 698664279297640794
+      ability_type: -869353983
+      chopping_type: -4855083040135353222
+      crushing_type: -8508422110644630109
+      piercing_type: -7706190253212291482
+      weapon_piercing: 1098179606456428539
       weapons_4: 2912464402848211330
       weapons_5: 2920547695714349933
       weapons_6: 8101326686158321518
       weapons_7: 853742892412031643
-      weapons_8: -7706190253212291482
-      weapons_9: -8508422110644630109
+      weapons_chopping: 698664279297640794
+      weapons_crushing: -7888296697152109952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

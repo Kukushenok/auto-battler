@@ -5,7 +5,7 @@
         private int times = 0;
         public IAttackBuilder AttackEnemy(IAttackBuilder bldr)
         {
-            if (times > 0) bldr = bldr.WithAttack(AttackType.Ability, times);
+            if (times > 0) bldr = bldr.WithAttack(AttackAttributes.SkillDamage(times));
             times++;
             return bldr;
         }

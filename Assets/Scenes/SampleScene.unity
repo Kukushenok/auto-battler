@@ -187,6 +187,208 @@ MonoBehaviour:
   allSections:
   - {fileID: 2138788622}
   - {fileID: 1239770279}
+--- !u!1 &115391932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115391933}
+  - component: {fileID: 115391935}
+  - component: {fileID: 115391934}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &115391933
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115391932}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1107943624}
+  - {fileID: 1174308797}
+  m_Father: {fileID: 1469952510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &115391934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115391932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da8722cf47d94640a81bf511d4ca949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.AnimatorSection
+  startDelay: 0.5
+  stopDelay: 0.5
+  setTrigger: hide
+--- !u!95 &115391935
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115391932}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 77ec5695ce545f04980494ed1187b862, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &129418167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129418168}
+  - component: {fileID: 129418172}
+  - component: {fileID: 129418171}
+  - component: {fileID: 129418170}
+  - component: {fileID: 129418169}
+  - component: {fileID: 129418173}
+  m_Layer: 5
+  m_Name: AttackProcessor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &129418168
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129418167}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1572527329}
+  m_Father: {fileID: 617327757}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -31.595007, y: -18.144997}
+  m_SizeDelta: {x: 35.84, y: 35.84}
+  m_Pivot: {x: 0.5, y: 0.50000006}
+--- !u!114 &129418169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129418167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38c914561b57c8468beb6545ba4480b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.DecomposedAttackDisplay
+  attackType: {fileID: 129418170}
+  attackDamageView: {fileID: 1572527330}
+  attackDisplayAudioPlayer: {fileID: 129418173}
+--- !u!114 &129418170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129418167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02692d7fb6f92449ab77ac35247c816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.WeaponAttackView
+  inOutDuration: 0.4
+  spriteMapper:
+    abilitySprite: {fileID: -869353983, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+    crushingSprite: {fileID: -8508422110644630109, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+    piercingSprite: {fileID: -7706190253212291482, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+    choppingSprite: {fileID: -4855083040135353222, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+--- !u!114 &129418171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129418167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -7706190253212291482, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &129418172
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129418167}
+  m_CullTransparentMesh: 1
+--- !u!114 &129418173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129418167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cdee4683e7a8a46acb6752700ec3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.AttackDisplayAudioPlayer
+  normalAttack: {fileID: 11400000, guid: 9ddb52d5ca8320e4a8a729de3ab63b97, type: 2}
+  failureAttack: {fileID: 11400000, guid: 8c1ac9b20d75fed409d426194f927910, type: 2}
 --- !u!1 &149841434
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &149841435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -322,6 +524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b527380fa8cecf946a7636cabdc126b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.ActiveTogglerSection
+  startDelay: 0.3
+  stopDelay: 0
 --- !u!114 &149841440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +667,157 @@ Transform:
   - {fileID: 193732317}
   m_Father: {fileID: 1357223312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297528001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297528002}
+  - component: {fileID: 297528004}
+  - component: {fileID: 297528003}
+  - component: {fileID: 297528005}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &297528002
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297528001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1999489679}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &297528003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297528001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\u041D\u0430\u0447\u0430\u0442\u044C"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &297528004
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297528001}
+  m_CullTransparentMesh: 1
+--- !u!114 &297528005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297528001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b527380fa8cecf946a7636cabdc126b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ActiveTogglerSection
+  startDelay: 0.3
+  stopDelay: 0.3
 --- !u!1 &304333299
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: '{0:0}'
 --- !u!114 &304333302
 MonoBehaviour:
@@ -789,6 +1145,7 @@ RectTransform:
   - {fileID: 190849779}
   - {fileID: 1663900996}
   - {fileID: 75229326}
+  - {fileID: 1469952510}
   m_Father: {fileID: 1357223312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1017,6 +1374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u041B\u043E\u0432\u043A\u043E\u0441\u0442\u044C\n<size=150%>{0}</s>"
 --- !u!114 &426357756
 MonoBehaviour:
@@ -1198,15 +1556,17 @@ RectTransform:
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1752859071}
   - {fileID: 680182572}
   - {fileID: 752483914}
   - {fileID: 430071789}
+  - {fileID: 1289527605}
   m_Father: {fileID: 1867329865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.549, y: 0.9578}
-  m_SizeDelta: {x: 100.7491, y: 139.8524}
+  m_AnchoredPosition: {x: 0.1111, y: 0.9533}
+  m_SizeDelta: {x: 144.5366, y: 140.3068}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430630433
 MonoBehaviour:
@@ -1360,6 +1720,157 @@ Transform:
   m_Children: []
   m_Father: {fileID: 815675299}
   m_LocalEulerAnglesHint: {x: 0, y: -80, z: 0}
+--- !u!1 &474291572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474291573}
+  - component: {fileID: 474291576}
+  - component: {fileID: 474291575}
+  - component: {fileID: 474291574}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &474291573
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474291572}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033138684}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &474291574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474291572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b527380fa8cecf946a7636cabdc126b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ActiveTogglerSection
+  startDelay: 0.3
+  stopDelay: 0.3
+--- !u!114 &474291575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474291572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\u0412\u044B\u0439\u0442\u0438"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &474291576
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474291572}
+  m_CullTransparentMesh: 1
 --- !u!1 &474854027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,6 +1923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u0410\u0422\u041A {0}"
 --- !u!114 &474854030
 MonoBehaviour:
@@ -1639,6 +2151,9 @@ MonoBehaviour:
     additionalSettings: 0
   prefabTransform: {fileID: 501920751}
   punchDir: {x: -0.3, y: 0, z: 0}
+  nameView: {fileID: 0}
+  basicAttackProcess: {fileID: 129418169}
+  attackDuration: 0.8
 --- !u!1 &551394990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,6 +2293,7 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 1357223311}
   controller: {fileID: 1811678518}
+  mainMenu: {fileID: 1469952511}
 --- !u!1 &617327756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +2328,7 @@ RectTransform:
   - {fileID: 1844042375}
   - {fileID: 654562153}
   - {fileID: 770103825}
+  - {fileID: 129418168}
   m_Father: {fileID: 1175349447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1934,6 +2451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u041B\u041E\u0412 {0}"
 --- !u!114 &617356694
 MonoBehaviour:
@@ -2224,6 +2742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u0412\u042B\u041D {0}"
 --- !u!114 &678990995
 MonoBehaviour:
@@ -7607,6 +8126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u0412\u042B\u041D {0}"
 --- !u!114 &941422741
 MonoBehaviour:
@@ -7833,6 +8353,9 @@ MonoBehaviour:
     additionalSettings: 0
   prefabTransform: {fileID: 953771402}
   punchDir: {x: 0.3, y: 0, z: 0}
+  nameView: {fileID: 1752859072}
+  basicAttackProcess: {fileID: 1289527609}
+  attackDuration: 0.8
 --- !u!1 &958811460
 GameObject:
   m_ObjectHideFlags: 0
@@ -7921,6 +8444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02692d7fb6f92449ab77ac35247c816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.WeaponAttackView
+  inOutDuration: 0.5
   spriteMapper:
     abilitySprite: {fileID: 151391851145879583, guid: 546c8baec3a7ec24b8f0c0882075025c, type: 3}
     crushingSprite: {fileID: -7888296697152109952, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
@@ -8008,6 +8532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02692d7fb6f92449ab77ac35247c816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.WeaponAttackView
+  inOutDuration: 0.5
   spriteMapper:
     abilitySprite: {fileID: 151391851145879583, guid: 546c8baec3a7ec24b8f0c0882075025c, type: 3}
     crushingSprite: {fileID: -7888296697152109952, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
@@ -8103,6 +8628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u0410\u0422\u041A {0}"
 --- !u!114 &1018083514
 MonoBehaviour:
@@ -8203,6 +8729,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018083511}
   m_CullTransparentMesh: 1
+--- !u!1 &1018242859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018242861}
+  - component: {fileID: 1018242860}
+  m_Layer: 0
+  m_Name: MenuSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1018242860
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018242859}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 0e1bf8a4e46251840908980ee1738536, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.05
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1018242861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018242859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3.676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025302896
 GameObject:
   m_ObjectHideFlags: 0
@@ -8314,6 +8969,7 @@ GameObject:
   - component: {fileID: 1080746555}
   - component: {fileID: 1080746554}
   - component: {fileID: 1080746553}
+  - component: {fileID: 1080746557}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -8417,9 +9073,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.12627551
+    y: 0.06712329
     width: 1
-    height: 0.74642855
+    height: 0.86454797
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -8455,6 +9111,152 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1080746557
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080746552}
+  m_Enabled: 1
+--- !u!1 &1107943623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107943624}
+  - component: {fileID: 1107943626}
+  - component: {fileID: 1107943625}
+  m_Layer: 5
+  m_Name: MainText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1107943624
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107943623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 115391933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -27.045013}
+  m_SizeDelta: {x: 300, y: 54.09}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1107943625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107943623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Generic
+
+    Auto Battler'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -0.5777913, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1107943626
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107943623}
+  m_CullTransparentMesh: 1
 --- !u!1 &1119342260
 GameObject:
   m_ObjectHideFlags: 0
@@ -8551,6 +9353,70 @@ Transform:
   - {fileID: 1541926512}
   m_Father: {fileID: 193732317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1174308796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174308797}
+  - component: {fileID: 1174308798}
+  m_Layer: 5
+  m_Name: ButtonLayout
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1174308797
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174308796}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1999489679}
+  - {fileID: 2033138684}
+  m_Father: {fileID: 115391933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 180, y: 100}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1174308798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174308796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 10
+  m_ChildAlignment: 7
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &1175349446
 GameObject:
   m_ObjectHideFlags: 0
@@ -8653,6 +9519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: + {0:0}
 --- !u!114 &1186224873
 MonoBehaviour:
@@ -8805,6 +9672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u0421\u0438\u043B\u0430\n<size=150%>{0}</s>"
 --- !u!114 &1188641832
 MonoBehaviour:
@@ -9056,6 +9924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u041E\u0417 {0:0}"
 --- !u!1 &1220247757
 GameObject:
@@ -9149,7 +10018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1239770275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9280,6 +10149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b527380fa8cecf946a7636cabdc126b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.ActiveTogglerSection
+  startDelay: 0.3
+  stopDelay: 0
 --- !u!1 &1286375954
 GameObject:
   m_ObjectHideFlags: 0
@@ -9332,6 +10203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProStringFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: '{0}'
 --- !u!114 &1286375957
 MonoBehaviour:
@@ -9432,6 +10304,132 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286375954}
   m_CullTransparentMesh: 1
+--- !u!1 &1289527604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289527605}
+  - component: {fileID: 1289527608}
+  - component: {fileID: 1289527607}
+  - component: {fileID: 1289527606}
+  - component: {fileID: 1289527609}
+  - component: {fileID: 1289527610}
+  m_Layer: 5
+  m_Name: AttackProcessor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1289527605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289527604}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1345782856}
+  m_Father: {fileID: 430630432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 47.1, y: -17.92}
+  m_SizeDelta: {x: 35.84, y: 35.84}
+  m_Pivot: {x: 0.5, y: 0.50000006}
+--- !u!114 &1289527606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289527604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02692d7fb6f92449ab77ac35247c816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.WeaponAttackView
+  inOutDuration: 0.4
+  spriteMapper:
+    abilitySprite: {fileID: -869353983, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+    crushingSprite: {fileID: -8508422110644630109, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+    piercingSprite: {fileID: -7706190253212291482, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+    choppingSprite: {fileID: -4855083040135353222, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+--- !u!114 &1289527607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289527604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -4855083040135353222, guid: 76815058bf8dbab4ba56d547122ef65f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1289527608
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289527604}
+  m_CullTransparentMesh: 1
+--- !u!114 &1289527609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289527604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38c914561b57c8468beb6545ba4480b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.DecomposedAttackDisplay
+  attackType: {fileID: 1289527606}
+  attackDamageView: {fileID: 1345782857}
+  attackDisplayAudioPlayer: {fileID: 1289527610}
+--- !u!114 &1289527610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289527604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cdee4683e7a8a46acb6752700ec3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.AttackDisplayAudioPlayer
+  normalAttack: {fileID: 11400000, guid: 9ddb52d5ca8320e4a8a729de3ab63b97, type: 2}
+  failureAttack: {fileID: 11400000, guid: 8c1ac9b20d75fed409d426194f927910, type: 2}
 --- !u!1 &1296484257
 GameObject:
   m_ObjectHideFlags: 0
@@ -9633,7 +10631,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 679f714b2aa703e44819bd299e39cbc7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.899371, g: 0.899371, b: 0.899371, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9705,6 +10703,159 @@ MonoBehaviour:
   player: {fileID: 1175349448}
   enemy: {fileID: 1867329866}
   DexterityCheckView: {fileID: 1794613584}
+--- !u!1 &1345782855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345782856}
+  - component: {fileID: 1345782859}
+  - component: {fileID: 1345782858}
+  - component: {fileID: 1345782857}
+  m_Layer: 5
+  m_Name: HealthHP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1345782856
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345782855}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1289527605}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.0000019073486}
+  m_SizeDelta: {x: 35.84, y: 35.84}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1345782857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345782855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5162454331859944c99631951aada970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.4
+  format: '{0:0}'
+--- !u!114 &1345782858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345782855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 27
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 13
+  m_fontSizeBase: 13
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1345782859
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345782855}
+  m_CullTransparentMesh: 1
 --- !u!1 &1357223311
 GameObject:
   m_ObjectHideFlags: 0
@@ -9760,7 +10911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1361673480
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9793,6 +10944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b527380fa8cecf946a7636cabdc126b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.ActiveTogglerSection
+  startDelay: 0
+  stopDelay: 0
 --- !u!114 &1361673482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10056,7 +11209,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProStringFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: '{0}'
+--- !u!1 &1469952509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469952510}
+  - component: {fileID: 1469952511}
+  m_Layer: 5
+  m_Name: MainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1469952510
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469952509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 115391933}
+  m_Father: {fileID: 386115389}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1469952511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469952509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7f6e6a393079d4d8fdec5e29566d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.MainMenuProcess
+  section: {fileID: 115391934}
+  startButton: {fileID: 1999489681}
+  endButton: {fileID: 2033138688}
 --- !u!1 &1487518254
 GameObject:
   m_ObjectHideFlags: 0
@@ -10109,6 +11315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u041B\u041E\u0412 {0}"
 --- !u!114 &1487518257
 MonoBehaviour:
@@ -19885,6 +21092,159 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1140790961}
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 100}
+--- !u!1 &1572527328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1572527329}
+  - component: {fileID: 1572527332}
+  - component: {fileID: 1572527331}
+  - component: {fileID: 1572527330}
+  m_Layer: 5
+  m_Name: HealthHP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1572527329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572527328}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 129418168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00000071526, y: -0.00000047683716}
+  m_SizeDelta: {x: 35.84, y: 35.84}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1572527330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572527328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5162454331859944c99631951aada970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.4
+  format: '{0:0}'
+--- !u!114 &1572527331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572527328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 27
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 13
+  m_fontSizeBase: 13
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1572527332
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572527328}
+  m_CullTransparentMesh: 1
 --- !u!1 &1647388436
 GameObject:
   m_ObjectHideFlags: 0
@@ -19937,6 +21297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: + {0:0}
 --- !u!114 &1647388439
 MonoBehaviour:
@@ -25168,6 +26529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProStringFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: '{0}'
 --- !u!1 &1732834448
 GameObject:
@@ -30163,6 +31525,159 @@ MonoBehaviour:
   - {fileID: 1736891769}
   coreMaterial: {fileID: -876546973899608171, guid: 58ca3cc5f7f8a524788eee4259a5fc86, type: 3}
   colorChangeTime: 2
+--- !u!1 &1752859070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752859071}
+  - component: {fileID: 1752859074}
+  - component: {fileID: 1752859073}
+  - component: {fileID: 1752859072}
+  m_Layer: 5
+  m_Name: EnemyName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1752859071
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752859070}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000923872, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430630432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 95.002, y: 90.307}
+  m_SizeDelta: {x: 65.35, y: 12.39}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1752859072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752859070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e618971efc7a55e45a8c464b73b45bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProStringFormatView
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
+  format: '{0}'
+--- !u!114 &1752859073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752859070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: xxx
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 10
+  m_fontSizeBase: 10
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 4
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1752859074
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752859070}
+  m_CullTransparentMesh: 1
 --- !u!1 &1794613582
 GameObject:
   m_ObjectHideFlags: 0
@@ -30173,6 +31688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794613583}
   - component: {fileID: 1794613584}
+  - component: {fileID: 1794613585}
   m_Layer: 5
   m_Name: DexterityCheck
   m_TagString: Untagged
@@ -30210,11 +31726,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794613582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a73837919673c4a994ff40eebbb787, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a41ef06451abe438f2df8e1d5f2259, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: AutoBattlerView::Game.View.DecomposedDexterityCheck
-  wanted: {fileID: 0}
-  got: {fileID: 2124770552}
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProDexterityCheck
+  text: {fileID: 2124770553}
+  audioManager: {fileID: 1794613585}
+  successColor: {r: 1, g: 1, b: 1, a: 1}
+  failureColor: {r: 0.5597484, g: 0.5597484, b: 0.5597484, a: 1}
+  transparent: {r: 0, g: 0, b: 0, a: 0}
+  roundSpeed: 0.5
+  rounds: 2
+  fadeInOutSpeed: 0.5
+  positionDiffer: {x: 0, y: 5, z: 0}
+  finalRoundSpeed: 1
+--- !u!114 &1794613585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794613582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c77cb220b099e4dbcb62c1ac17264f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.DexterityCheckAudioManager
+  roundSound: {fileID: 11400000, guid: 9b0f8f8b2df193947a1b35455ac16391, type: 2}
+  successSound: {fileID: 11400000, guid: 72dab1d09779d254489e2498c9bb2dd1, type: 2}
+  failSound: {fileID: 11400000, guid: 58e52210f3ffb7647b162b0b8034c198, type: 2}
 --- !u!1 &1811678517
 GameObject:
   m_ObjectHideFlags: 0
@@ -30787,6 +32326,187 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977181754}
   m_CullTransparentMesh: 1
+--- !u!1 &1999489678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999489679}
+  - component: {fileID: 1999489684}
+  - component: {fileID: 1999489683}
+  - component: {fileID: 1999489682}
+  - component: {fileID: 1999489681}
+  - component: {fileID: 1999489680}
+  - component: {fileID: 1999489686}
+  - component: {fileID: 1999489685}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1999489679
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 297528002}
+  m_Father: {fileID: 1174308797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90, y: -28.550003}
+  m_SizeDelta: {x: 180, y: 32.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1999489680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b527380fa8cecf946a7636cabdc126b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ActiveTogglerSection
+  startDelay: 0
+  stopDelay: 0.5
+--- !u!114 &1999489681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd190e797f7a74341888235fbcefb0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ButtonChoiceView
+  section: {fileID: 1999489686}
+--- !u!114 &1999489682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1999489683}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1999489683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 2100000, guid: 654aba336a37fa946b8e9c5ed1650e6c, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1999489684
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_CullTransparentMesh: 1
+--- !u!114 &1999489685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d80e408646a6f48b578c3514616212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ColorTransitionSection
+  durationTime: 0.5
+--- !u!114 &1999489686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999489678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3106aebdcda80864aa4ab361bbc4a982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.CompositeParallelMonoBehSection
+  allSections:
+  - {fileID: 1999489685}
+  - {fileID: 1999489680}
+  - {fileID: 297528005}
 --- !u!1 &2021947250
 GameObject:
   m_ObjectHideFlags: 0
@@ -30839,6 +32559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u041E\u0417 {0:0}"
 --- !u!114 &2021947253
 MonoBehaviour:
@@ -30939,6 +32660,187 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021947250}
   m_CullTransparentMesh: 1
+--- !u!1 &2033138683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033138684}
+  - component: {fileID: 2033138691}
+  - component: {fileID: 2033138690}
+  - component: {fileID: 2033138689}
+  - component: {fileID: 2033138688}
+  - component: {fileID: 2033138687}
+  - component: {fileID: 2033138686}
+  - component: {fileID: 2033138685}
+  m_Layer: 5
+  m_Name: QuitButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2033138684
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 474291573}
+  m_Father: {fileID: 1174308797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90, y: -73.55}
+  m_SizeDelta: {x: 180, y: 32.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2033138685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d80e408646a6f48b578c3514616212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ColorTransitionSection
+  durationTime: 0.5
+--- !u!114 &2033138686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3106aebdcda80864aa4ab361bbc4a982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.CompositeParallelMonoBehSection
+  allSections:
+  - {fileID: 2033138685}
+  - {fileID: 2033138687}
+  - {fileID: 474291574}
+--- !u!114 &2033138687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b527380fa8cecf946a7636cabdc126b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ActiveTogglerSection
+  startDelay: 0
+  stopDelay: 0.5
+--- !u!114 &2033138688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd190e797f7a74341888235fbcefb0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AutoBattlerView::Game.View.ButtonChoiceView
+  section: {fileID: 2033138686}
+--- !u!114 &2033138689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2033138690}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2033138690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 2100000, guid: 654aba336a37fa946b8e9c5ed1650e6c, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2033138691
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033138683}
+  m_CullTransparentMesh: 1
 --- !u!1 &2062883973
 GameObject:
   m_ObjectHideFlags: 0
@@ -30991,6 +32893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: "\u0412\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u043E\u0441\u0442\u044C\n<size=150%>{0}</s>"
 --- !u!114 &2062883976
 MonoBehaviour:
@@ -31143,6 +33046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProFloatFormatView
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   transparent: {r: 0, g: 0, b: 0, a: 0}
+  transitionTime: 0.5
   format: '{0:0}'
 --- !u!114 &2068798094
 MonoBehaviour:
@@ -31254,7 +33158,6 @@ GameObject:
   - component: {fileID: 2124770551}
   - component: {fileID: 2124770554}
   - component: {fileID: 2124770553}
-  - component: {fileID: 2124770552}
   m_Layer: 5
   m_Name: Dexterity
   m_TagString: Untagged
@@ -31281,21 +33184,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 18.39502}
   m_SizeDelta: {x: 122.29, y: 36.79001}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2124770552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124770550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c868cfbe1c091f04ba6c20caca053d88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AutoBattlerView::Game.View.TextMeshProIntFormatView
-  baseColor: {r: 0.70122325, g: 1, b: 0.59607846, a: 1}
-  transparent: {r: 0, g: 0, b: 0, a: 0}
-  format: '{0}'
 --- !u!114 &2124770553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31319,7 +33207,7 @@ MonoBehaviour:
   m_text: 27
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0676796b569c76e419c77c04242d5844, type: 2}
-  m_sharedMaterial: {fileID: -8635534620434878042, guid: 0676796b569c76e419c77c04242d5844, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 33c2c27067743e348a16d503c95ccb86, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31349,7 +33237,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -31496,3 +33384,4 @@ SceneRoots:
   - {fileID: 681539021}
   - {fileID: 1357223312}
   - {fileID: 600906731}
+  - {fileID: 1018242861}

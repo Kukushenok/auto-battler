@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.View
 {
 
-    public abstract class MonoBehaviourView<X> : MonoBehaviour, IView<X>, IViewProcess<X>
+    public abstract class MonoBehaviourView<X> : MonoBehaviourProcess<X>, IView<X>, IViewProcess<X>
     {
         public enum State { Initting, Initted, Hiding, Hidden }
         private State state = State.Hidden;
@@ -30,9 +30,8 @@ namespace Game.View
             await DoHide();
             state = State.Hidden;
         }
-        protected void SetHidden() => state = State.Hidden;
 
-        public async UniTask Process(X value)
+        public sealed override async UniTask Process(X value)
         {
             if (state != State.Hidden) return;
             await InitValueAsync(value);

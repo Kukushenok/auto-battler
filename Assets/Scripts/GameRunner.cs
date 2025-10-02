@@ -2,29 +2,38 @@
 using AutoBattler.Looped;
 using AutoBattler.Utils;
 using Cysharp.Threading.Tasks;
+using Game.View;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 public class GameRunner : IAsyncStartable, ILoopHandler
 {
+#if UNITY_WEBGL
+    private const bool SHOW_QUIT_BUTTON = false;
+#else
+    private const bool SHOW_QUIT_BUTTON = false;
+#endif
     private IGameController controller;
     private Func<IEntityRepository> entityRepoCreator;
     private Func<ISkillRepository> skillRepoCreator;
     private IRandom random;
+    private IMainMenu mainMenu;
     [Inject]
-    public GameRunner(IGameController cnt, Func<IEntityRepository> entRepo, Func<ISkillRepository> skRepo, IRandom rnd)
+    public GameRunner(IGameController cnt, Func<IEntityRepository> entRepo, Func<ISkillRepository> skRepo, IRandom rnd, IMainMenu menu)
     {
         controller = cnt;
         entityRepoCreator = entRepo;
         skillRepoCreator = skRepo;
         random = rnd;
+        mainMenu = menu;
     }
 
-    public Task<bool> DecideToContinuePlaying()
+    public async Task<bool> DecideToContinuePlaying()
     {
-        return Task.FromResult(true);
+        return (await mainMenu.Show(SHOW_QUIT_BUTTON)) == IMainMenu.Move.PlayGame;
     }
 
     public AutoBattler.AutoBattler.Settings GetSettings()

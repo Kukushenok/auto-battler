@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemies_3_0
+      name: enemy_slime
       rect:
         serializedVersion: 2
         x: 47
@@ -137,7 +137,7 @@ TextureImporter:
         width: 128
         height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemies_3_1
+      name: enemy_dragon
       rect:
         serializedVersion: 2
         x: 206
@@ -159,7 +159,7 @@ TextureImporter:
         width: 284
         height: 269
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2e0b0725da3f1e943b80225ca864f855
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemies_3_0: -1594816135681246573
-      enemies_3_1: -6781211193816744299
+      enemy_dragon: -6781211193816744299
+      enemy_slime: -1594816135681246573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
