@@ -26,7 +26,7 @@ namespace AutoBattler
                 var builder = entityB.GetAttackBuilder();
                 if (!check)
                 {
-                    builder = new MissFirstAttackDecorator(builder);
+                    builder = new MissAttackDecorator(builder);
                 }
                 var atk = entityA.DoAttack(builder).Build();
                 yield return new AttackEvent(atk, isPlayer);

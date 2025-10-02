@@ -15,7 +15,7 @@
             {
                 if (triggers)
                 {
-                    decorating = decorating.WithAttack(AttackType.Ability, damageBonus);
+                    decorating = decorating.WithAttack(AttackAttributes.SkillDamage(damageBonus));
                 }
                 return base.OnBuild(decorating);
             }

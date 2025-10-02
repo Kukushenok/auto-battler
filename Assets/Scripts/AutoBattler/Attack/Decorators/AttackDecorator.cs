@@ -15,9 +15,9 @@
             return OnBuild(decorating);
         }
 
-        public IAttackBuilder WithAttack(AttackType src, float damage)
+        public IAttackBuilder WithAttack(AttackAttributes attrs)
         {
-            decorating = OnAttack(src, damage, decorating);
+            decorating = OnAttack(attrs, decorating);
             return this;
         }
         public IAttackBuilder WithAttackerStats(IEntityStats stats)
@@ -26,7 +26,7 @@
             return this;
         }
         protected virtual IAttack OnBuild(IAttackBuilder decorated) => decorated.Build();
-        protected virtual IAttackBuilder OnAttack(AttackType src, float damage, IAttackBuilder decorated) => decorated.WithAttack(src, damage);
+        protected virtual IAttackBuilder OnAttack(AttackAttributes attrs, IAttackBuilder decorated) => decorated.WithAttack(attrs);
         protected virtual IAttackBuilder OnAttackerStats(IEntityStats stats, IAttackBuilder decorated) => decorated.WithAttackerStats(stats);
     }
 }

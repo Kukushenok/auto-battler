@@ -8,14 +8,15 @@
             public DoubledownDecorator(IAttackBuilder decorating) : base(decorating)
             {
             }
-            protected override IAttackBuilder OnAttack(AttackType src, float damage, IAttackBuilder decorated)
+            protected override IAttackBuilder OnAttack(AttackAttributes attrs, IAttackBuilder decorated)
             {
-                if (src != AttackType.Ability && enabled)
+                decorated = base.OnAttack(attrs, decorated);
+                if (attrs.Type != AttackType.Ability && enabled)
                 {
-                    decorated = decorated.WithAttack(AttackType.Ability, damage);
+                    decorated = decorated.WithAttack(attrs.WithTypeAndDamage(AttackType.Ability, attrs.Damage));
                     enabled = false;
                 }
-                return base.OnAttack(src, damage, decorated);
+                return decorated;
             }
         }
         public bool enabled = true;
