@@ -12,9 +12,9 @@ using VContainer.Unity;
 public class GameRunner : IAsyncStartable, ILoopHandler
 {
 #if UNITY_WEBGL
-    private const bool SHOW_QUIT_BUTTON = false;
+    private const bool DISABLE_QUIT = true;
 #else
-    private const bool SHOW_QUIT_BUTTON = false;
+    private const bool DISABLE_QUIT = false;
 #endif
     private IGameController controller;
     private Func<IEntityRepository> entityRepoCreator;
@@ -33,7 +33,7 @@ public class GameRunner : IAsyncStartable, ILoopHandler
 
     public async Task<bool> DecideToContinuePlaying()
     {
-        return (await mainMenu.Show(SHOW_QUIT_BUTTON)) == IMainMenu.Move.PlayGame;
+        return (await mainMenu.Show(DISABLE_QUIT)) == IMainMenu.Move.PlayGame;
     }
 
     public AutoBattler.AutoBattler.Settings GetSettings()
