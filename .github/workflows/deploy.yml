@@ -6,7 +6,7 @@ on:
 env:
   VERSIONING_FILE_PATH: "unity-version.txt"
   BUILD_OUTPUT_PATH: build
-  RELEASE_NAME: MyGame
+  RELEASE_NAME: AutoBattler
 
 permissions:
   contents: read
@@ -87,7 +87,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./webgl-build/
+          path: ./webgl-build/WebGL
 
   deploy:
     name: Deploy
