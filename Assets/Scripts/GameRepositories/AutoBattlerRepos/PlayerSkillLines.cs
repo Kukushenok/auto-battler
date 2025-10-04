@@ -2,20 +2,29 @@
 using AutoBattler.External;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Game.Repositories
 {
     public class SkillLine : ISkillTree
     {
         private Queue<SkillDescriptorSO> line;
-        private IWeapon startingWeapon;
-        public SkillLine(IEnumerable<SkillDescriptorSO> descriptors, IWeapon startingWeapon)
+        private PlayerClassSkillBranch branch;
+        public int Level { get; private set; }
+        public SkillLine(PlayerClassSkillBranch br)
         {
-            this.startingWeapon = startingWeapon;
-            line = new Queue<SkillDescriptorSO>(descriptors);
+            Level = 1;
+            branch = br;
+            line = new Queue<SkillDescriptorSO>(br.Skills);
         }
 
         public bool IsExausted => line.Count == 0;
+
+        public float HealthBonus => branch.HealthBonus;
+
+        public string LabelName => string.Format(branch.LabelFormat, Level);
+
+        public string ID => branch.name;
 
         public ISkillDescriptor GetCurrentSkill()
         {
@@ -23,13 +32,14 @@ namespace Game.Repositories
             return null;
         }
 
-        public IWeapon GetStartingWeapon()
+        public IWeapon GetWeapon()
         {
-            return startingWeapon;
+            return branch.StartingWeapon;
         }
         public void AddLevel()
         {
             line.Dequeue();
+            Level++;
         }
     }
     class PlayerSkillLines : ISkillRepository
@@ -38,12 +48,7 @@ namespace Game.Repositories
         private int limitLevel;
         public PlayerSkillLines(PlayerClassSkillBranch[] branches, int limitLevel)
         {
-            skillLines = new SkillLine[branches.Length];
-            for (int i = 0; i < skillLines.Length; i++)
-            {
-                skillLines[i] = new SkillLine(branches[i].Skills, branches[i].StartingWeapon);
-            }
-
+            skillLines = branches.Select(x => new SkillLine(x)).ToArray();
             this.limitLevel = limitLevel;
         }
 
@@ -51,7 +56,7 @@ namespace Game.Repositories
         {
             foreach (var Q in skillLines)
             {
-                if (Q == descriptor)
+                if (Q.ID == descriptor.ID)
                 {
                     Q.AddLevel();
                     limitLevel--;
@@ -61,7 +66,7 @@ namespace Game.Repositories
             throw new InvalidOperationException("The skill should be from GetSkills operation");
         }
 
-        IEnumerable<ISkillTree> ISkillRepository.GetSkills()
+        IEnumerable<ISkillTree> ISkillRepository.GetSkillTrees()
         {
             if (limitLevel <= 0) yield break;
             foreach (var Q in skillLines)

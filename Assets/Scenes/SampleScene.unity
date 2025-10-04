@@ -9072,10 +9072,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.024844721
-    y: 0
-    width: 0.95069087
-    height: 1
+    x: 0
+    y: 0.08530184
+    width: 1
+    height: 0.82824147
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -9315,7 +9315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e98df8799f8a0546b05912f844ed6a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AutoBattlerView::Game.View.SkillChooser
-  Prefab: {fileID: 4490580939341503941, guid: 20b442231da6da64bb9054a0e44627ef, type: 3}
+  Prefab: {fileID: 6318691821127515167, guid: 20b442231da6da64bb9054a0e44627ef, type: 3}
   CoreTransform: {fileID: 1977181755}
   WindowAnimator: {fileID: 1658925436}
 --- !u!1 &1140790960

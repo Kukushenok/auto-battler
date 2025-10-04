@@ -3,6 +3,7 @@ using AutoBattler.External;
 using Cysharp.Threading.Tasks;
 using Game.View.ColorScheme;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 using VContainer;
@@ -12,7 +13,7 @@ namespace Game.View
     public class GameController : MonoBehaviour, IGameController
     {
         [SerializeField] private BaseBattlePresenter presenter;
-        [SerializeField] private SkillChooser skillChooser;
+        [SerializeField] private SkillLineChooser skillChooser;
         [SerializeField] private WeaponChooser weaponChooser;
         [SerializeField] private MonoBehaviourProcess<bool> gameResultsScreen;
         [SerializeField] private MonoBehaviourProcess<IEntityStats> startStatsScreen;
@@ -25,11 +26,6 @@ namespace Game.View
         public IBattlerPresenter Battle()
         {
             return presenter;
-        }
-
-        public Task<ISkillDescriptor> ChooseGameSkill(IEnumerable<ISkillDescriptor> descriptors)
-        {
-            return skillChooser.ChooseFrom(descriptors).AsTask();
         }
 
         public Task<IWeapon> ChooseWeapon(IWeapon first, IWeapon alternative)
@@ -51,6 +47,11 @@ namespace Game.View
         public Task ShowStartingStats(IEntityStats stats)
         {
             return startStatsScreen.Process(stats).AsTask();
+        }
+
+        public Task<ISkillTree> ChooseSkillTree(IEnumerable<ISkillTree> descriptors)
+        {
+            return skillChooser.ChooseFrom(descriptors).AsTask();
         }
     }
 }

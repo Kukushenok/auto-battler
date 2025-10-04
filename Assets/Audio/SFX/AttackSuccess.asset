@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AttackSuccess
   m_EditorClassIdentifier: AutoBattlerView::Game.View.Audio.AudioDescriptor
   <Clip>k__BackingField: {fileID: 8300000, guid: b1522f9242dbf9e4fba7588311165127, type: 3}
-  <VolumeDeviation>k__BackingField: {x: 0.8, y: 1}
+  <VolumeDeviation>k__BackingField: {x: 0.6, y: 0.7}
   <PitchDeviation>k__BackingField: {x: 0.9, y: 1.1}

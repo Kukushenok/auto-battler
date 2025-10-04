@@ -8,5 +8,7 @@ namespace Game.Repositories
     {
         [field: SerializeField] public List<SkillDescriptorSO> Skills { get; private set; }
         [field: SerializeField] public WeaponSO StartingWeapon { get; private set; }
+        [field: SerializeField] public string LabelFormat { get; private set; }
+        [field: SerializeField] public float HealthBonus { get; private set; }
     }
 }

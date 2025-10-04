@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DexterityFailure
   m_EditorClassIdentifier: AutoBattlerView::Game.View.Audio.AudioDescriptor
   <Clip>k__BackingField: {fileID: 8300000, guid: 0179b0ecfc584a04e973ace7d0fee4bd, type: 3}
-  <VolumeDeviation>k__BackingField: {x: 0.8, y: 1}
+  <VolumeDeviation>k__BackingField: {x: 0.6, y: 0.7}
   <PitchDeviation>k__BackingField: {x: 0.9, y: 1.1}
