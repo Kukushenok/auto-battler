@@ -17,3 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1226e30842635344085071f717a6e08a, type: 2}
   - {fileID: 11400000, guid: 93f2aededdaadf1489a70f25aca15a53, type: 2}
   <StartingWeapon>k__BackingField: {fileID: 11400000, guid: b4d8e9b9b69291541b0464d279db6ac6, type: 2}
+  <LabelFormat>k__BackingField: "\u0412\u0430\u0440\u0432\u0430\u0440 \u0443\u0440.
+    {0}"
+  <HealthBonus>k__BackingField: 6

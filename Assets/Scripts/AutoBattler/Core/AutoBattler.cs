@@ -1,5 +1,6 @@
 using AutoBattler.External;
 using AutoBattler.Utils;
+using Codice.Client.BaseCommands.BranchExplorer.ExplorerTree;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,33 +22,19 @@ namespace AutoBattler
         {
             m_Settings = settings;
         }
-        private async Task<(ISkillDescriptor, IWeapon)> ChooseSkill()
+        private async Task<ISkillTree> ChooseTree(bool disableWeapons = false)
         {
-            IWeapon resWeapon = null;
-            ISkillDescriptor chosenSkill = null;
-            var skills = m_Settings.SkillRepository.GetSkills();
-            List<ISkillDescriptor> descriptors = new List<ISkillDescriptor>();
-            foreach (var x in skills)
+            ISkillTree resTree = null;
+            var skillTrees = m_Settings.SkillRepository.GetSkillTrees().Where(x => !x.IsExausted).ToList();
+            if(disableWeapons)
             {
-                if (!x.IsExausted) descriptors.Add(x.GetCurrentSkill());
+                skillTrees = skillTrees.Select(x => (ISkillTree)new SkillTreeDisabledWeapon(x)).ToList();
             }
-            if (descriptors.Count > 0)
+            if(skillTrees.Count > 0)
             {
-                chosenSkill = await m_Settings.Controller.ChooseGameSkill(descriptors);
-                foreach (var x in skills)
-                {
-                    if (!x.IsExausted)
-                    {
-                        if (x.GetCurrentSkill() == chosenSkill)
-                        {
-                            resWeapon = x.GetStartingWeapon();
-                            m_Settings.SkillRepository.Choose(x);
-                            break;
-                        }
-                    }
-                }
+                resTree = await m_Settings.Controller.ChooseSkillTree(skillTrees);
             }
-            return (chosenSkill, resWeapon);
+            return resTree;
         }
         private IEntityStats ChooseRandomStats() => new EntityStats(
                 m_Settings.Random.GetRange(1, 4),
@@ -67,13 +54,15 @@ namespace AutoBattler
 
                 // CHOOSE A SKILL
                 bool aquiredLevel = false;
-                (var newSkill, var skillTreeWeapon) = await ChooseSkill();
-                if (newSkill != null)
+                var tree = await ChooseTree(currRounds > 1);
+                if (tree != null)
                 {
-                    weaponOverride ??= skillTreeWeapon;
-                    chosenSkills.Add(newSkill);
+                    var weapon = tree.GetWeapon();
+                    if (weapon != null) weaponOverride = weapon;
+                    chosenSkills.Add(tree.GetCurrentSkill());
                     aquiredLevel = true;
-                    playerHealth += newSkill.HealthBonus;
+                    playerHealth += tree.HealthBonus;
+                    m_Settings.SkillRepository.Choose(tree);
                 }
 
                 // SETUP
