@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.View
 {
-    public class AttackDisplayAudioPlayer: MonoBehaviourAudioPlayer
+    public class AttackDisplayAudioPlayer : MonoBehaviourAudioPlayer
     {
         [SerializeField] private AudioDescriptor normalAttack;
         [SerializeField] private AudioDescriptor failureAttack;

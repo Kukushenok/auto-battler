@@ -1,7 +1,5 @@
 using AutoBattler;
 using Cysharp.Threading.Tasks;
-using System.Threading.Tasks;
-using TMPro;
 using UnityEngine;
 
 namespace Game.View

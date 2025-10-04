@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace AutoBattler
+﻿namespace AutoBattler
 {
     public enum AttackType
     {
-        Ability = 0, 
+        Ability = 0,
         Chopping = 1, // Рубящий
-        Crushing = 2 , // Дробящий
+        Crushing = 2, // Дробящий
         Piercing = 3 // Колющий
     }
 }

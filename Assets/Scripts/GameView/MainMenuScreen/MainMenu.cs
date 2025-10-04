@@ -1,6 +1,5 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
 namespace Game.View
 {
     public interface IMainMenu
@@ -17,10 +16,10 @@ namespace Game.View
         {
             await section.TryShow();
             IMainMenu.Move result = IMainMenu.Move.PlayGame;
-            if(disableQuit)
+            if (disableQuit)
             {
                 await startButton.WaitForSelection();
-            } 
+            }
             else
             {
                 int idx = await ChoiceExtensions.WaitForSelection(startButton, endButton);

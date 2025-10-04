@@ -2,7 +2,7 @@
 
 namespace AutoBattler
 {
-    internal class SkillTreeDisabledWeapon: ISkillTree
+    internal class SkillTreeDisabledWeapon : ISkillTree
     {
         private ISkillTree decorating;
 

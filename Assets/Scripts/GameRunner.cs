@@ -6,7 +6,6 @@ using Game.View;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 public class GameRunner : IAsyncStartable, ILoopHandler

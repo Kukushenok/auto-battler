@@ -3,7 +3,6 @@ using AutoBattler.External;
 using Cysharp.Threading.Tasks;
 using Game.View.ColorScheme;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 using VContainer;

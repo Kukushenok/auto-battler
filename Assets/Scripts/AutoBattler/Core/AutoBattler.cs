@@ -1,6 +1,5 @@
 using AutoBattler.External;
 using AutoBattler.Utils;
-using Codice.Client.BaseCommands.BranchExplorer.ExplorerTree;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,11 +25,11 @@ namespace AutoBattler
         {
             ISkillTree resTree = null;
             var skillTrees = m_Settings.SkillRepository.GetSkillTrees().Where(x => !x.IsExausted).ToList();
-            if(disableWeapons)
+            if (disableWeapons)
             {
                 skillTrees = skillTrees.Select(x => (ISkillTree)new SkillTreeDisabledWeapon(x)).ToList();
             }
-            if(skillTrees.Count > 0)
+            if (skillTrees.Count > 0)
             {
                 resTree = await m_Settings.Controller.ChooseSkillTree(skillTrees);
             }

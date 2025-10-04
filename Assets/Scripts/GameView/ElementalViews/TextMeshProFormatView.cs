@@ -36,7 +36,7 @@ namespace Game.View
         protected override async UniTask DoUpdate(T value)
         {
             text.text = string.Format(format, value);
-            await LMotion.Punch.Create(1.0f, 0.2f, transitionTime/2.0f).WithFrequency(20)
+            await LMotion.Punch.Create(1.0f, 0.2f, transitionTime / 2.0f).WithFrequency(20)
                 .WithDampingRatio(0f).Bind(x => transform.localScale = Vector3.one * x).ToUniTask();
         }
     }

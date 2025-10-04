@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.View
 {
     [RequireComponent(typeof(Animator))]
-    public class AnimatorSection: ActiveTogglerSection
+    public class AnimatorSection : ActiveTogglerSection
     {
         [SerializeField] private string setTrigger;
         private Animator anim;
