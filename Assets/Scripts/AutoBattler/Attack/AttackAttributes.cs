@@ -2,7 +2,7 @@
 
 namespace AutoBattler
 {
-    public class AttackAttributes: IAttack
+    public class AttackAttributes : IAttack
     {
         public readonly float Damage;
         public readonly AttackType Type;

@@ -1,7 +1,6 @@
 using Cysharp.Threading.Tasks;
 using LitMotion;
 using LitMotion.Extensions;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
@@ -52,7 +51,7 @@ namespace Game.View
                 await LMotion.Punch.Create(text.transform.localScale, Vector3.one * 0.2f, roundSpeed).BindToLocalScale(text.transform).ToUniTask();
             }
             text.text = value.Got.ToString();
-            if(!value.IsSuccessful)
+            if (!value.IsSuccessful)
             {
                 audioManager.OnFail();
                 await LMotion.Shake.Create(text.transform.localPosition, positionDiffer, finalRoundSpeed).BindToLocalPosition(text.transform).ToUniTask();

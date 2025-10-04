@@ -1,8 +1,5 @@
-﻿using AutoBattler;
-using AutoBattler.External;
+﻿using AutoBattler.External;
 using Cysharp.Threading.Tasks;
-using Game.Registries;
-using Game.Repositories;
 using System.Collections.Generic;
 using UnityEngine;
 using VContainer;

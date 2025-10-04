@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.View
 {
-    public class DexterityCheckAudioManager: MonoBehaviourAudioPlayer
+    public class DexterityCheckAudioManager : MonoBehaviourAudioPlayer
     {
         [SerializeField] private AudioDescriptor roundSound;
         [SerializeField] private AudioDescriptor successSound;

@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Game.View
 {
@@ -17,7 +16,7 @@ namespace Game.View
         {
             UniTaskCompletionSource<int> src = new UniTaskCompletionSource<int>();
             List<UniTask> tasks = new List<UniTask>();
-            for(int i = 0; i < choices.Length; i++)
+            for (int i = 0; i < choices.Length; i++)
             {
                 int dx = i;
                 tasks.Add(choices[i].InitValueAsync(new Choice(() => src.TrySetResult(dx))));

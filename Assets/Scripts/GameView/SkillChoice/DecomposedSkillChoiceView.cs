@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using Game.Repositories;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Game.View

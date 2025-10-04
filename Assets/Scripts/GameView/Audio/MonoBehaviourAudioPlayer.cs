@@ -3,7 +3,7 @@ using VContainer;
 
 namespace Game.View.Audio
 {
-    public abstract class MonoBehaviourAudioPlayer: MonoBehaviour
+    public abstract class MonoBehaviourAudioPlayer : MonoBehaviour
     {
         protected IAudioManager Manager;
         [Inject]
@@ -12,7 +12,7 @@ namespace Game.View.Audio
             this.Manager = manager;
         }
     }
-    public class BasicMonoBehaviourAudioPlayer: MonoBehaviourAudioPlayer
+    public class BasicMonoBehaviourAudioPlayer : MonoBehaviourAudioPlayer
     {
         [field: SerializeField] private AudioDescriptor descriptor;
         public void Play()

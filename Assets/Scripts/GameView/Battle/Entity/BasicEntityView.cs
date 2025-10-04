@@ -32,7 +32,7 @@ namespace Game.View
                 Destroy(currentPrefabInstance.gameObject);
             }
             currentPrefabInstance = null;
-            
+
         }
 
         protected override async UniTask DoInit(BattleEntitySkinSO value)
@@ -40,7 +40,7 @@ namespace Game.View
             currentPrefabInstance = Instantiate(value.Skin, prefabTransform).GetComponent<SpriteRenderer>();
             currentPrefabInstance.color = inSettings.StartValue;
             await UniTask.WhenAll(
-                nameView.TryInit(value.Name), 
+                nameView.TryInit(value.Name),
                 LMotion.Create(inSettings).BindToColor(currentPrefabInstance).ToUniTask()
                 );
         }

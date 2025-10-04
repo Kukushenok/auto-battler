@@ -1,5 +1,4 @@
 ﻿using AutoBattler.External;
-using Game.Repositories;
 using System;
 
 namespace Game.View
