@@ -1,3 +1,4 @@
+# Yes it was vibecoded but had you know with such vibe!
 name: Deploy to GitHub Pages
 
 on:
@@ -21,9 +22,8 @@ jobs:
       matrix:
         include:
         - targetPlatform: StandaloneWindows64
-          butlerChannel: windows
+        - targetPlatform: StandaloneLinux64
         - targetPlatform: WebGL
-          butlerChannel: html5
 
     outputs:
       unityVersion: ${{ steps.version_output.outputs.unityVersion }}
@@ -69,25 +69,55 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     needs: unity_build
-    if: contains(needs.unity_build.outputs.buildArtifact, 'WebGL')
-    
+    if: always()
     steps:
-      - name: Download WebGL build artifact
+      - name: Download all build artifacts
         uses: actions/download-artifact@v4
         with:
-          name: ${{ needs.unity_build.outputs.buildArtifact }}
-          path: ./webgl-build
+          path: ./downloads
 
-      - name: List downloaded files
-        run: ls -la ./webgl-build/
+      - name: List downloaded artifacts
+        run: |
+          echo "Artifacts downloaded:"
+          ls -R ./downloads
 
+      - name: Find WebGL build folder
+        id: find_webgl
+        run: |
+          WEBGL_PATH=$(find ./downloads -type d -name "WebGL" | head -n 1)
+          if [ -z "$WEBGL_PATH" ]; then
+            echo "No WebGL build found."
+            exit 1
+          fi
+          echo "Found WebGL build at: $WEBGL_PATH"
+          echo "WEBGL_PATH=$WEBGL_PATH" >> $GITHUB_ENV
+      - name: Copy other builds into WebGL TemplateData folder
+        run: |
+          mkdir -p "$WEBGL_PATH/TemplateData/OtherBuilds"
+          for dir in ./downloads/*; do
+            if [ -d "$dir" ] && [[ "$dir" != *"WebGL"* ]]; then
+              echo "Copying $(basename "$dir") into TemplateData/OtherBuilds/"
+              cp -r "$dir" "$WEBGL_PATH/TemplateData/OtherBuilds/$(basename "$dir")"
+            fi
+          done
+        env:
+          WEBGL_PATH: ${{ env.WEBGL_PATH }}
+      - name: Generate builds.json manifest
+        run: |
+          echo "[" > "$WEBGL_PATH/TemplateData/OtherBuilds/builds.json"
+          for file in "$WEBGL_PATH/TemplateData/OtherBuilds/"*.zip; do
+            name=$(basename "$file")
+            echo "  \"${name}\"," >> "$WEBGL_PATH/TemplateData/OtherBuilds/builds.json"
+          done
+          sed -i '$ s/,$//' "$WEBGL_PATH/TemplateData/OtherBuilds/builds.json"
+          echo "]" >> "$WEBGL_PATH/TemplateData/OtherBuilds/builds.json"
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Upload combined WebGL artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./webgl-build/WebGL
+          path: ${{ env.WEBGL_PATH }}
 
   deploy:
     name: Deploy
