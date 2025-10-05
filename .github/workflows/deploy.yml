@@ -59,10 +59,23 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
       - name: Remove BurstDebugInformation folders
         run: |
-          echo "Removing BurstDebugInformation folders..."
-          chmod -R 777 "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}/${{ env.RELEASE_NAME }}_BurstDebugInformation_DoNotShip" || true
-          rm -rf "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}/${{ env.RELEASE_NAME }}_BurstDebugInformation_DoNotShip" || true
-          echo "Cleanup complete."
+        echo "Removing BurstDebugInformation folders..."
+        TARGET_DIR="${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}/${{ env.RELEASE_NAME }}_BurstDebugInformation_DoNotShip"
+        if [ -d "$TARGET_DIR" ]; then
+            echo "Found folder: $TARGET_DIR"
+            echo "Attempting to unlock and remove it..."
+            # Remove immutability if on Linux
+            if command -v chattr &>/dev/null; then
+              sudo chattr -R -i "$TARGET_DIR" 2>/dev/null || true
+            fi
+            # Relax permissions and delete
+            sudo chmod -R u+w "$TARGET_DIR" 2>/dev/null || true
+            sudo rm -rf "$TARGET_DIR" 2>/dev/null || true
+            echo "Successfully removed: $TARGET_DIR"
+        else
+            echo "No BurstDebugInformation folder found - skipping."
+        fi
+        echo "Cleanup complete."
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
