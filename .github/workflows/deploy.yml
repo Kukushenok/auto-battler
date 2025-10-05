@@ -22,7 +22,7 @@ jobs:
       matrix:
         include:
         - targetPlatform: StandaloneWindows64
-	- targetPlatform: StandaloneLinux64
+        - targetPlatform: StandaloneLinux64
         - targetPlatform: WebGL
 
     outputs:
