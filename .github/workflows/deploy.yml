@@ -40,7 +40,7 @@ jobs:
         uses: Appegy/unity-version-action@v1
 
       - name: Setting Artifact name env variable
-        run: echo "BUILD_ARTIFACT_NAME=${{ env.RELEASE_NAME }}-${{ matrix.targetPlatform }}-${{ env.UNITY_VERSION }}.$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+        run: echo "BUILD_ARTIFACT_NAME=${{ env.RELEASE_NAME }}-${{ matrix.targetPlatform }}" >> $GITHUB_ENV
         
       - name: Set job outputs
         id: artifact_output
@@ -60,8 +60,8 @@ jobs:
       - name: Remove BurstDebugInformation folders
         run: |
           echo "Removing BurstDebugInformation folders..."
-          chmod -R 777 "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}/*_DoNotShip" || true
-          rm -rf "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}/*_DoNotShip" || true
+          chmod -R 777 "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}/${{ env.RELEASE_NAME }}_BurstDebugInformation_DoNotShip" || true
+          rm -rf "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}/${{ env.RELEASE_NAME }}_BurstDebugInformation_DoNotShip" || true
           echo "Cleanup complete."
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
