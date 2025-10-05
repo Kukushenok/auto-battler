@@ -59,6 +59,10 @@
     <br />
     <a href="TemplateData/THE_TASK.pdf">Техническое задание</a>
     <p>
+    	Ссылки на другие версии игры:
+    	<p id="other-builds"></p>
+    </p>
+    <p>
     Umspannwerk by cryptic scenery is licensed under a Attribution-NonCommercial-ShareAlike 4.0 International License.
     </p>
     <script src="Build/{{{ LOADER_FILENAME }}}"></script>
@@ -97,23 +101,23 @@
         }
       }
       document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
+      // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      //  var meta = document.createElement('meta');
+      //  meta.name = 'viewport';
+      //  meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      //  document.getElementsByTagName('head')[0].appendChild(meta);
 
-        var canvas = document.querySelector("#unity-canvas");
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        canvas.style.position = "fixed";
-        canvas.style.top = "0";
-        canvas.style.left = "0";
+      //  var canvas = document.querySelector("#unity-canvas");
+      //  canvas.style.width = "100%";
+      //  canvas.style.height = "100%";
+      //  canvas.style.position = "fixed";
+      //  canvas.style.top = "0";
+      //  canvas.style.left = "0";
 
-        document.getElementById('fullscreen-btn').style.display = "none";
+      //  document.getElementById('fullscreen-btn').style.display = "none";
 
-        document.body.style.textAlign = "left";
-      }
+      //  document.body.style.textAlign = "left";
+      //}
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
@@ -131,5 +135,20 @@
         alert(message);
       });
     </script>
+    <script>
+	fetch("TemplateData/OtherBuilds/builds.json")
+	  .then(r => r.json())
+	  .then(builds => {
+	    const list = document.getElementById("other-builds");
+	    builds.forEach(file => {
+	      const li = document.createElement("li");
+	      const a = document.createElement("a");
+	      a.href = "TemplateData/OtherBuilds/" + file;
+	      a.textContent = file.replace(".zip", "");
+	      li.appendChild(a);
+	      list.appendChild(li);
+	    });
+	  });
+	</script>
   </body>
 </html>
