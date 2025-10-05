@@ -60,7 +60,13 @@ jobs:
       - name: Remove BurstDebugInformation folders
         run: |
           echo "Removing BurstDebugInformation folders..."
-          find "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}" -type d -name "*_DoNotShip" -prune -exec rm -rf {} +
+          for dir in $(find "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}" -type d -name "*_DoNotShip"); do
+              echo "Found: $dir"
+              echo "Fixing permissions..."
+              chmod -R u+w "$dir" || true
+              echo "Removing..."
+              rm -rf "$dir" || true
+          done
           echo "Cleanup complete."
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
