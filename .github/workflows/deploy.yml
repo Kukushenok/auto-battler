@@ -57,13 +57,16 @@ jobs:
           buildName: ${{ env.BUILD_NAME}}
           unityVersion: ${{ env.UNITY_VERSION }}
           targetPlatform: ${{ matrix.targetPlatform }}
-
+      - name: Remove BurstDebugInformation folders
+        run: |
+          echo "Removing BurstDebugInformation folders..."
+          find "${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}" -type d -name "*_DoNotShip" -prune -exec rm -rf {} +
+          echo "Cleanup complete."
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BUILD_ARTIFACT_NAME }}
           path: ${{ env.BUILD_OUTPUT_PATH }}/${{ matrix.targetPlatform }}
-
   # Add the GitHub Pages deployment jobs here
   deploy_to_pages:
     name: Deploy to GitHub Pages
@@ -75,12 +78,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: ./downloads
-
       - name: List downloaded artifacts
         run: |
           echo "Artifacts downloaded:"
           ls -R ./downloads
-
       - name: Find WebGL build folder
         id: find_webgl
         run: |
@@ -91,13 +92,13 @@ jobs:
           fi
           echo "Found WebGL build at: $WEBGL_PATH"
           echo "WEBGL_PATH=$WEBGL_PATH" >> $GITHUB_ENV
-      - name: Copy other builds into WebGL TemplateData folder
+      - name: Zip platform builds
         run: |
           mkdir -p "$WEBGL_PATH/TemplateData/OtherBuilds"
           for dir in ./downloads/*; do
             if [ -d "$dir" ] && [[ "$dir" != *"WebGL"* ]]; then
-              echo "Copying $(basename "$dir") into TemplateData/OtherBuilds/"
-              cp -r "$dir" "$WEBGL_PATH/TemplateData/OtherBuilds/$(basename "$dir")"
+              zipname="$(basename "$dir").zip"
+              zip -r "$WEBGL_PATH/TemplateData/OtherBuilds/$zipname" "$dir"
             fi
           done
         env:
